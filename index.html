@@ -5,741 +5,162 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="=D">
   <title>Home</title>
-
-  <!--
-    - favicon
-  -->
   <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
   <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-  <!--
-    - #MAIN
-  -->
-
   <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
     <aside class="sidebar" data-sidebar>
-
       <div class="sidebar-info">
-
         <figure class="avatar-box">
-          <img src="./assets/images/a.png" alt="pølserull" width="80">
+          <img src="./assets/images/pfp.webp" alt="pølserull" width="80" height="145">
         </figure>
 
         <div class="info-content">
           <h1 class="name" title="pølserull">pølserull</h1>
-
-          <p class="title">Something</p>
+          <p class="title">Student</p>
         </div>
 
         <button class="info_more-btn" data-sidebar-btn>
           <span>Show Contacts</span>
-
           <ion-icon name="chevron-down"></ion-icon>
         </button>
-
       </div>
 
       <div class="sidebar-info_more">
-
         <div class="separator"></div>
-
         <ul class="contacts-list">
-
           <li class="contact-item">
-
             <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
             </div>
-
             <div class="contact-info">
               <p class="contact-title">Location</p>
-
               <address>England, UK</address>
             </div>
-
           </li>
-
         </ul>
 
         <div class="separator"></div>
-
         <ul class="social-list">
-
           <li class="social-item">
             <a href="https://github.com/polserull" class="social-link">
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
-
           <li class="social-item">
             <a href="https://twitter.com/_polserull" class="social-link">
               <ion-icon name="logo-twitter"></ion-icon>
             </a>
           </li>
-
-          <li class="social-item">
-            <a href="https://discord.gg/aDcy5nPJx5" class="social-link">
-              <ion-icon name="logo-discord"></ion-icon>
-            </a>
-          </li>
-		  
-		  <li class="social-item">
+		      <li class="social-item">
             <a href="https://steamcommunity.com/id/polserull/" class="social-link">
               <ion-icon name="logo-steam"></ion-icon>
             </a>
           </li>
-		  
-		  <li class="social-item">
+		      <li class="social-item">
             <a href="https://ko-fi.com/polserull" class="social-link">
               <ion-icon name="cafe"></ion-icon>
             </a>
           </li>
-
         </ul>
-
       </div>
-
     </aside>
 
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
     <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
       <nav class="navbar">
-
         <ul class="navbar-list">
-
           <li class="navbar-item">
             <button class="navbar-link  active" data-nav-link>About</button>
           </li>
-
           <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Stuff</button>
           </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Updates</button>
-          </li>
-		  
-		  <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Pictures</button>
-          </li>
-
         </ul>
-
       </nav>
 
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
       <article class="about  active" data-page="about">
-
         <header>
           <h2 class="h2 article-title">About me</h2>
         </header>
-
         <section class="about-text">
-          <p>
-            (ﾉ◕ヮ◕)ﾉ:･✧ ✧･:ヽ(◕ヮ◕ヽ)
-          </p>
-		  <p>Not decided what to put here yet...</p>
+          17┊Mozzie + Ace┊☈
         </section>
-
-
-        </section>
-
       </article>
 	  
       <article class="stuff" data-page="stuff">
-
         <header>
           <h2 class="h2 article-title">Stuff</h2>
         </header>
-
         <section class="projects">
-
           <ul class="filter-list">
-
             <li class="filter-item">
               <button class="active" data-filter-btn>All</button>
             </li>
-
             <li class="filter-item">
               <button data-filter-btn>Stuff</button>
             </li>
-
             <li class="filter-item">
               <button data-filter-btn>Minecraft Mods</button>
             </li>
           </ul>
 
           <div class="filter-select-box">
-
             <button class="filter-select" data-select>
-
               <div class="select-value" data-selecct-value>Select category</div>
-
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
               </div>
-
             </button>
 
             <ul class="select-list">
-
               <li class="select-item">
                 <button data-select-item>All</button>
               </li>
-
               <li class="select-item">
                 <button data-select-item>Stuff</button>
               </li>
-
               <li class="select-item">
                 <button data-select-item>Minecraft Mods</button>
               </li>
-
             </ul>
-
           </div>
 
           <ul class="project-list">
             <li class="project-item  active" data-filter-item data-category="minecraft mods">
               <a href="https://modrinth.com/mod/european-railways-addon">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/euaddon.png" alt="arrival" loading="lazy">
+                  <img src="./assets/images/projects/euaddon.webp" alt="arrival" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">European Railways Addon</h3>
-
                 <p class="project-category">Minecraft Mod - Java</p>
-
               </a>
             </li>
 			
 			<li class="project-item  active" data-filter-item data-category="minecraft mods">
               <a href="https://github.com/TalonFloof/EnhancedWeather">
-
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/eh.png" alt="arrival" loading="lazy">
+                  <img src="./assets/images/projects/enhanced-weather.webp" alt="arrival" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">Enhanced Weather</h3>
-
                 <p class="project-category">By TalonFloof - Contributed</p> 
-
               </a>
             </li>
-
           </ul>
-
         </section>
-
       </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="updates" data-page="updates">
-
-        <header>
-          <h2 class="h2 article-title">Updates</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-<!--
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			-->
-
-          </ul>
-
-
-        </section>
-
-      </article>
-	  
-	  <article class="pictures" data-page="pictures">
-	  
-	  <header>
-          <h2 class="h2 article-title">Pictures</h2>
-        </header>
-		
-		<section class="blog-posts">
-
-          <ul class="blog-posts-list">
-	
-			
-			<li class="blog-post-item">
-              <a href="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_145937.jpg">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_145937.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			<li class="blog-post-item">
-              <a href="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150035.jpg">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150035.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			<li class="blog-post-item">
-              <a href="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150215.jpg">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150211.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			<li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150215.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			
-			<li class="blog-post-item">
-              <a href="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150259.jpg">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150259.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			<li class="blog-post-item">
-              <a href="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150327.jpg">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150327.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			<li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150439.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			<li class="blog-post-item">
-              <a href="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150730.jpg">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150730.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			<li class="blog-post-item">
-              <a href="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150745.jpg">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150739.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			<li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150745.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			<li class="blog-post-item">
-              <a href="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150906.jpg">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150906.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			<li class="blog-post-item">
-              <a href="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150933.jpg">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150933.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			<li class="blog-post-item">
-              <a href="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.jpg">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			<li class="blog-post-item">
-              <a href="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150938.jpg">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150938.jpg" alt="tornado_damage" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">WX</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Apr 15, 2024</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Assumed Tornado Damage</h3>
-
-                  <p class="blog-text">
-                    Assumed Tornado Damage At West Bridgford, Nottingham
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-			
-			<p class="blog-text">These images may be used aslong as credit is given AND these images cannot be used for AI Datasets / Generative AI</p>
-			
-			
-		  
-		  </ul>
-		  </section>
-
-	  
-	  </article>
-
-
-
-
 
       <!--
         - #CONTACT
@@ -789,25 +210,21 @@
 
   </main>
 
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
   <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script>
   console.log("Hey what are you doing here!");
+  console.log(`
+  --_-_-_-_---
+   -_-_-_
+    -_-_-
+     -__-
+    _-_
+   _-
+   -_
+    _-_
+  `)
   </script>
-
 </body>
-
 </html>
