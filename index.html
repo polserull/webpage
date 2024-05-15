@@ -7,200 +7,197 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="=D">
   <title>Home</title>
-  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
   crossorigin=""/>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
   crossorigin=""></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./scripts/style.css">
 </head>
 
-<body>
-  <main>
-    <aside class="sidebar" data-sidebar>
-      <div class="sidebar-info">
-        <figure class="avatar-box">
-          <img src="./assets/images/pfp.webp" alt="pølserull" width="80">
-        </figure>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">pølserull</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="javascript:openPage('Home', this, 'green')" id="defaultOpen">Home</a></li>
+        <li><a href="javascript:openPage('Projects', this, 'red')">Projects</a></li>
+        <li><a href="./wx.html">UK Archive Tornado Map</a></li>
+        <li><a href="javascript:openPage('wxreports', this, 'red')">UK WX Reports</a></li>
+        <li><a href="javascript:openPage('Pictures', this, 'red')">Pictures</a></li>
+      </ul>
+    </div>
+</nav>
 
-        <div class="info-content">
-          <h1 class="name" title="pølserull">pølserull</h1>
-          <p class="title">Student</p>
+<div class="header">
+    <h1 id="headertitle">Home</h1>
+</div>
+
+<br>
+
+<div class="main-content-area">
+    <div id="Home" class="tabcontent">
+        <h1 style="color: white; padding-left: 8px;">About Me</h1>
+        <image src="./images/pfp.webp" alt="my profile picture" style="width: 175px; height: 175px; float: left; margin-right: 35px;"></image>
+        <ul class="list-box">
+            <li>My general intrests are Software Development & Weather.</li>
+            <li>Currently a Student.</li>
+            <li>TORRO Member / Upcoming Volunteer TORRO Site Investigator. (The Tornado And Storm Research Orginisation)</li>
+            <li>Favorite Bands: Rammstein, Rammstein and Rammstein.</li>
+            <li>I do some Game Dev mainly making Working R6 Concept Gadgets from other peoples concepts.</li>
+            <li>My best projects are the European Railways Addon and the UK Outlook Creator.</li>
+            <li>My next project is a UK Tornado Archive.</li>
+        </ul>
+    </div>
+    
+    <div id="Projects" class="tabcontent">
+        <a href="https://github.com/polserull/Outlook-Creator" target="_blank"><div class="card">
+            <img src="./images/projects/outlook-creator.webp" alt="Outlook Creator Icon" style="width:100%; border-radius: 25px;">
+            <div class="container">
+              <p style="font-size: 16px; padding-top: 10px;"><b>Uk Weather Outlook Creator</b></p> 
+              <p style="color: gray;">Released - Github - Java</p> 
+            </div>
+        </div></a>
+        <a href="https://modrinth.com/mod/european-railways-addon" target="_blank"><div class="card">
+            <img src="./images/projects/euaddon.webp" alt="European Railways Addon Icon" style="width:100%; border-radius: 25px;">
+            <div class="container">
+              <p style="font-size: 16px; padding-top: 10px;"><b>European Railways Addon</b></p> 
+              <p style="color: gray;">Minecraft Mod - Java</p> 
+            </div>
+        </div></a>
+        <a href="https://github.com/TalonFloof/EnhancedWeather" target="_blank"><div class="card">
+            <img src="./images/projects/enhanced-weather.webp" alt="European Railways Addon Icon" style="width:100%; border-radius: 25px;">
+            <div class="container">
+              <p style="font-size: 16px; padding-top: 10px;"><b>Enhanced Weather</b></p> 
+              <p style="color: gray;">By TalonFloof - Contributed</p> 
+            </div>
+        </div></a>
+    </div>
+
+    <div id="Pictures" class="tabcontent">
+        <button type="button" class="collapsible">Suspected Tornado Damage or SLW - West Bridgford, Nottingham</button>
+        <div class="content">
+            <a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_145937.jpg" target="_blank"><div class="card-image">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_145937.jpg" alt="Snapped Tree Damage" style="width:175%; border-radius: 15px;">
+                <div class="container-image">
+                  <p style="font-size: 16px; padding-top: 10px;"><b>Snapped Tree</b></p> 
+                </div>
+            </div></a>
+            <a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150035.jpg" target="_blank"><div class="card-image-next">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150035.jpg" alt="Sheet Metal Damage" style="width:175%; border-radius: 15px;">
+                <div class="container-image">
+                  <p style="font-size: 16px; padding-top: 10px;"><b>Sheet Metal Damage</b></p> 
+                </div>
+            </div></a>
+            <a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150211.jpg" target="_blank"><div class="card-image">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150211.jpg" alt="Damaged Roof Tiles" style="width:175%; border-radius: 15px;">
+                <div class="container-image">
+                  <p style="font-size: 16px; padding-top: 10px;"><b>Damaged Roof Tiles</b></p> 
+                </div>
+            </div></a>
+            <a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150215.jpg" target="_blank"><div class="card-image-next">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150215.jpg" alt="Damaged Roof Tiles" style="width:175%; border-radius: 15px;">
+                <div class="container-image">
+                  <p style="font-size: 16px; padding-top: 10px;"><b>Damaged Roof Tiles</b></p> 
+                </div>
+            </div></a>
+            <a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150730.jpg" target="_blank"><div class="card-image">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150730.jpg" alt="Damaged Fence" style="width:175%; border-radius: 15px;">
+                <div class="container-image">
+                  <p style="font-size: 16px; padding-top: 10px;"><b>Damaged Fence</b></p> 
+                </div>
+            </div></a>
+            <a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150739.jpg" target="_blank"><div class="card-image-next">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150739.jpg" alt="Collapsed Chimney & Severe Roof Damage" style="width:175%; border-radius: 15px;">
+                <div class="container-image">
+                  <p style="font-size: 16px; padding-top: 10px;"><b>Collapsed Chimney & Severe Roof Damage</b></p> 
+                </div>
+            </div></a>
+            <a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.jpg" target="_blank"><div class="card-image">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.jpg" alt="Missing Roof Tiles" style="width:175%; border-radius: 15px;">
+                <div class="container-image">
+                  <p style="font-size: 16px; padding-top: 10px;"><b>Missing Roof Tiles</b></p> 
+                </div>
+            </div></a>
+            <a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150938.jpg" target="_blank"><div class="card-image-next">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150938.jpg" alt="Missing Roof Tiles" style="width:175%; border-radius: 15px;">
+                <div class="container-image">
+                  <p style="font-size: 16px; padding-top: 10px;"><b>Missing Roof Tiles</b></p> 
+                </div>
+            </div></a>
+            <a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/wx-download.zip" target="_blank"><div class="card-image">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_145937.jpg" alt="ZIP DOWNLOAD" style="width:175%; border-radius: 15px;">
+                <div class="container-image">
+                  <p style="font-size: 16px; padding-top: 10px;"><b>Zip File Download</b></p> 
+                </div>
+            </div></a>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-      </div>
-
-      <div class="sidebar-info_more">
-        <div class="separator"></div>
-        <ul class="contacts-list">
-          <li class="contact-item">
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address>England, UK</address>
-            </div>
-          </li>
-        </ul>
-
-        <div class="separator"></div>
-        <ul class="social-list">
-          <li class="social-item">
-            <a href="https://github.com/polserull" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-          <li class="social-item">
-            <a href="https://twitter.com/_polserull" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-		      <li class="social-item">
-            <a href="https://steamcommunity.com/id/polserull/" class="social-link">
-              <ion-icon name="logo-steam"></ion-icon>
-            </a>
-          </li>
-		      <li class="social-item">
-            <a href="https://ko-fi.com/polserull" class="social-link">
-              <ion-icon name="cafe"></ion-icon>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </aside>
-
-    <div class="main-content">
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Projects</button>
-          </li>
-		  <li class="navbar-item">
-            <button class="navbar-link" onclick="invalmap()" data-nav-link>WX</button>
-          </li>
-        </ul>
-      </nav>
-
-      <article class="about  active" data-page="about">
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-        <section class="about-text">
-          17┊Mozzie + Ace┊☈
-        </section>
-      </article>
-	  
-      <article class="projects" data-page="projects">
-        <header>
-          <h2 class="h2 article-title">Projects</h2>
-        </header>
-        <section class="projects">
-          <ul class="filter-list">
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Stuff</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Minecraft Mods</button>
-            </li>
-          </ul>
-
-          <div class="filter-select-box">
-            <button class="filter-select" data-select>
-              <div class="select-value" data-selecct-value>Select category</div>
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-            </button>
-
-            <ul class="select-list">
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Stuff</button>
-              </li>
-              <li class="select-item">
-                <button data-select-item>Minecraft Mods</button>
-              </li>
-            </ul>
-          </div>
-		  
-		  <ul class="project-list">
-		  <li class="project-item  active" data-filter-item data-category="stuff">
-              <a href="https://github.com/polserull/Outlook-Creator">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/projects/outlook-creator.webp" alt="arrival" loading="lazy">
-                </figure>
-                <h3 class="project-title">UK Weather Outlook Creator</h3>
-                <p class="project-category">Released - Java</p> 
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="minecraft mods">
-              <a href="https://modrinth.com/mod/european-railways-addon">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/projects/euaddon.webp" alt="arrival" loading="lazy">
-                </figure>
-                <h3 class="project-title">European Railways Addon</h3>
-                <p class="project-category">Minecraft Mod - Java</p>
-              </a>
-            </li>
-			
-			<li class="project-item  active" data-filter-item data-category="minecraft mods">
-              <a href="https://github.com/TalonFloof/EnhancedWeather">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/projects/enhanced-weather.webp" alt="arrival" loading="lazy">
-                </figure>
-                <h3 class="project-title">Enhanced Weather</h3>
-                <p class="project-category">By TalonFloof - Contributed</p> 
-              </a>
-            </li>
-          </ul>
-        </section>
-      </article>
-	  
-	  <article class="wx" data-page="wx">
-	  <header>
-          <h2 class="h2 article-title">WX - Events</h2>
-    </header>
-      <section>
-        <div id="map" style="height:450px; width:840px;"></div>
-		  </section>
-	  </article>
+        <button type="button" class="collapsible">Questionable Art</button>
+        <div class="content">
+            <a href="#" target="_blank"><div class="card-image-drawing">
+                <img src="./images/drawings/drawing.webp" alt="Missing Roof Tiles" style="width:100%; border-radius: 15px;">
+                <div class="container-image">
+                  <p style="font-size: 16px; padding-top: 10px;"><b>Random Drawing</b></p> 
+                </div>
+            </div></a>
+        </div>
     </div>
-  </main>
 
-  <script src="./assets/js/script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script>
-  console.log("Hey what are you doing here!");
+    <div id="wxreports" class="tabcontent">
+        <h1 style="color: white;">Weather Reports</h1>
+        <p style="color: white;">Currently Work In Progress / All Reports Come From Social Media</p>
+        <div id="map" style="height:435px; width:1200px;"></div>
+    </div>
+</div>
+
+<div class="twt-content-area">
+    <a class="twitter-timeline" href="https://twitter.com/_polserull?ref_src=twsrc%5Etfw" data-theme="dark"  data-height="520" height: 25px;">Tweets by Pølserull</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+</body>
+</html>
+
+<script>
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      document.getElementById('headertitle').innerHTML = pageName;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+    
+    document.getElementById("defaultOpen").click();
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+
+console.log("Hey what are you doing here!");
   console.log(`
   --_-_-_-_---
    -_-_-_
@@ -212,9 +209,8 @@
     _-_
   `)
 
-  var map = L.map('map').setView([51.505, -0.09], 13);
+  var map = L.map('map').setView([52.560556, -1.470278], 5);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
   }).addTo(map);
 
@@ -226,26 +222,25 @@
   map.invalidateSize()
 
   var funnelCloudMarker = L.icon({
-    iconUrl: './assets/images/report-map-ico/funnel-cloud.webp',
+    iconUrl: './images/report-map-ico/funnel-cloud.webp',
 
     iconSize:     [24, 24],
-    iconAnchor:   [24, 24],
+    iconAnchor:   [12, 10],
 });
 
 var damagingLightningMarker = L.icon({
-    iconUrl: './assets/images/report-map-ico/damaging-lightning.webp',
+    iconUrl: './images/report-map-ico/damaging-lightning.webp',
 
     iconSize:     [24, 24],
-    iconAnchor:   [24, 24],
+    iconAnchor:   [12, 10],
 });
 
 var floodingMarker = L.icon({
-    iconUrl: './assets/images/report-map-ico/flooding.webp',
+    iconUrl: './images/report-map-ico/flooding.webp',
 
     iconSize:     [24, 24],
-    iconAnchor:   [24, 24],
+    iconAnchor:   [12, 10],
 });
 </script>
-<script src="./assets/js/markers.js"></script>
-</body>
-</html>
+<script src="./scripts/markers.js"></script>
+       
