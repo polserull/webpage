@@ -44,5 +44,5 @@ Location: Lepp Crescent, Bury
 Source: News | <a href="https://www.manchestereveningnews.co.uk/news/greater-manchester-news/we-saw-big-ball-white-29161139">Source</a></pre>`);
 L.marker([51.668376663548166, -4.709275272505088], {icon: funnelCloudMarker}).addTo(map).bindPopup(`<pre>Possible Funnel Cloud 
 Estimate Location: Tenby Golf Club, Tenby
-[51.668376663548166, -4.709275272505088] [16-05-24 N/A]
+[51.668376663548166, -4.709275272505088] [16-05-24 14:20BST]
 Source: Twitter | <a href="https://twitter.com/RECEPTOR17/status/1791110556948025600/photo/2">Source</a></pre>`);
