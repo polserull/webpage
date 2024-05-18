@@ -14,22 +14,19 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
   crossorigin=""/>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-  crossorigin=""></script>
   <link rel="stylesheet" href="./scripts/style.css">
 </head>
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">pølserull</a>
+        <a class="navbar-brand" href="javascript:openPage('Home', this)">pølserull</a>
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="javascript:openPage('Home', this)" id="defaultOpen">Home</a></li>
         <li><a href="javascript:openPage('Projects', this)">Projects</a></li>
-        <li><a href="./wx.html">UK Archive Tornado Map</a></li>
-        <li><a href="javascript:openPage('WX Reports', this)">UK WX Reports</a></li>
+        <li><a href="javascript:alert('Work In Progress!');">UK Archive Tornado Map</a></li>
+        <li><a href="javascript:openPage('WX Events', this)">UK WX Events</a></li>
         <li><a href="javascript:openPage('Pictures', this)">Pictures</a></li>
       </ul>
     </div>
@@ -44,23 +41,29 @@
 <div class="main-content-area">
     <div id="Home" class="tabcontent">
         <h1 style="color: white; padding-left: 8px;">About Me</h1>
-        <image src="./images/pfp.webp" alt="my profile picture" style="width: 175px; height: 175px; float: left; margin-right: 35px;"></image>
+        <image src="./images/pfp.webp" alt="my profile picture" style="width: 182px; height: 175px; float: left; margin-right: 35px;"></image>
         <ul class="list-box">
-            <li>My general intrests are Software Development & Weather.</li>
+            <li>My general intrests are Software Development & Meteorology.</li>
             <li>Currently a Student.</li>
-            <li>TORRO Member / Upcoming Volunteer TORRO Site Investigator. (The Tornado And Storm Research Orginisation)</li>
+            <li>Hopfully Upcoming Volunteer TORRO Site Investigator. (The Tornado And Storm Research Orginisation)</li>
             <li>Favorite Bands: Rammstein, Rammstein and Rammstein.</li>
             <li>I do some Game Dev mainly making Working R6 Concept Gadgets from other peoples concepts.</li>
             <li>My best projects are the European Railways Addon and the UK Outlook Creator.</li>
             <li>My next project is a UK Tornado Archive.</li>
         </ul>
+        <br>
+        <a href="https://x.com/_polserull" target="_blank"><button class="button" style="background-color: #249ef0;">Twitter</button></a>
+        <a href="https://github.com/polserull" target="_blank"><button class="button" style="background-color: black;">Github</button></a>
+        <a href="https://steamcommunity.com/id/polserull/" target="_blank"><button class="button" style="background-color: #102148;">Steam</button></a>
+        <a href="https://modrinth.com/user/polserull" target="_blank"><button class="button" style="background-color: #22da6f;">Modrinth</button></a>
+        <a href="https://ko-fi.com/polserull" target="_blank"><button class="button" style="background-color: #ff6360;">KO-FI</button></a>
     </div>
     
     <div id="Projects" class="tabcontent">
         <a href="https://github.com/polserull/Outlook-Creator" target="_blank"><div class="card">
             <img src="./images/projects/outlook-creator.webp" alt="Outlook Creator Icon" style="width:100%; border-radius: 25px;">
             <div class="container">
-              <p style="font-size: 16px; padding-top: 10px;"><b>Uk Weather Outlook Creator</b></p> 
+              <p style="font-size: 16px; padding-top: 10px;"><b>UK Weather Outlook Creator</b></p> 
               <p style="color: gray;">Released - Github - Java</p> 
             </div>
         </div></a>
@@ -78,6 +81,20 @@
               <p style="color: gray;">By TalonFloof - Contributed</p> 
             </div>
         </div></a>
+        <a href="https://x.com/_polserull/status/1787454009483186611" target="_blank"><div class="card">
+          <img src="./images/projects/shiva-gadget-concept.webp" alt="Shiva Operator R6 Concept Icon" style="width:100%; border-radius: 25px;">
+          <div class="container">
+            <p style="font-size: 16px; padding-top: 10px;"><b>Shiva Gadget Concept</b></p> 
+            <p style="color: gray;">Operator By: @Oryx_Elite - Unity - C#</p> 
+          </div>
+      </div></a>
+        <a href="https://x.com/_polserull/status/1786587729876205704" target="_blank"><div class="b-card">
+          <img src="./images/projects/yamuy-gadget-concept.webp" alt="European Railways Addon Icon" style="width:100%; border-radius: 25px;">
+          <div class="container">
+            <p style="font-size: 16px; padding-top: 10px;"><b>Yamuy Gadget Concept</b></p> 
+            <p style="color: gray;">Operator By: @Kaimento - Unity - C#</p> 
+          </div>
+      </div></a>
     </div>
 
     <div id="Pictures" class="tabcontent">
@@ -148,24 +165,64 @@
                 </div>
             </div></a>
         </div>
+
+        <button type="button" class="collapsible">Operator Gadget Concepts In Unity Videos</button>
+        <div class="content">
+            <a href="#" target="_blank"><div class="card-image">
+              <video width="475" height="245" style="border-radius: 25px;" controls>
+                <source src="./video/shiva-gadget-video-unity.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>              
+                <div class="container-image">
+                  <p style="font-size: 16px; padding-top: 10px;"><b>Shiva Gadget Video</b></p> 
+                </div>
+            </div></a>
+            <a href="#" target="_blank"><div class="card-image-video">
+              <video width="475" height="245" style="border-radius: 25px;" controls>
+                <source src="./video/yamuy-gadget-video-unity.mkv" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>              
+                <div class="container-image">
+                  <p style="font-size: 16px; padding-top: 10px;"><b>Yamuy Gadget Video</b></p> 
+                </div>
+            </div></a>
+        </div>
     </div>
 
-    <div id="WX Reports" class="tabcontent">
-        <h1 style="color: white;">Weather Reports</h1>
-        <p style="color: white;">Currently Work In Progress / All Reports Come From Social Media</p>
-        <div id="map" style="height:435px; width:1200px;"></div>
+    <div id="WX Events" class="tabcontent">
+        <h1 style="color: white;">Weather Events</h1>
+        <p style="color: white;">If you come across tornadoes, funnel clouds, damaging winds or any other weather events if safe to do so take a picture and record the time, please report here: <a href="https://www.torro.org.uk/severe-weather-report" target="_blank">TORRO</a>. [Not Associated]</p>
+        <div id="map" style="float:left; height:435px; width:920px; border-radius: 25px;"></div>
+        <div class="wx-report-key">
+          <img src="./images/report-map-ico/funnel-cloud.webp" style="width:50px; height:50px" alt="Possible Funnel Cloud Marker"></img>
+          <h6 style="float: right; color:white; margin-right: 24px; margin-top: 18px;">Possible Funnel Cloud</h6>
+          <hr class="rounded"></hr>
+          <img src="./images/report-map-ico/damaging-lightning.webp" style="width:50px; height:50px" alt="Damaging Lightning Marker"></img>
+          <h6 style="float: right; color:white; margin-right: -8px; margin-top: 18px;">Damaging Lightning Incident</h6>
+          <hr class="rounded"></hr>
+          <img src="./images/report-map-ico/damaging-hail.webp" style="width:50px; height:50px" alt="Damaging Hail Marker"></img>
+          <h6 style="float: right; color:white; margin-right: 19px; margin-top: 18px;">Damaging Hail Incident</h6>
+          <hr class="rounded"></hr>
+          <img src="./images/report-map-ico/damaging-wind.webp" style="width:50px; height:50px" alt="Damaging Wind Marker"></img>
+          <h6 style="float: right; color:white; margin-right: 11px; margin-top: 18px;">Damaging Wind Incident</h6>
+          <hr class="rounded"></hr>
+          <img src="./images/report-map-ico/flooding.webp" style="width:50px; height:50px" alt="Flooding Marker"></img>
+          <h6 style="float: right; color:white; margin-right: 96px; margin-top: 18px;">Flooding</h6>
+        </div>
     </div>
 </div>
 
 <div class="twt-content-area">
-    <a class="twitter-timeline" href="https://twitter.com/_polserull?ref_src=twsrc%5Etfw" data-theme="dark"  data-height="520" height: 25px;">Tweets by Pølserull</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <a class="twitter-timeline" href="https://twitter.com/_polserull?ref_src=twsrc%5Etfw" data-theme="dark" data-height="520" height: 25px;">Tweets by _polserull</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
-
 </body>
 </html>
 
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="./scripts/markers.js"></script>
+
 <script>
-    function openPage(pageName,elmnt,color) {
+    function openPage(pageName,elmnt) {
       var i, tabcontent, tablinks;
       document.getElementById('headertitle').innerHTML = pageName;
       tabcontent = document.getElementsByClassName("tabcontent");
@@ -197,7 +254,7 @@ for (i = 0; i < coll.length; i++) {
 }
 
 console.log("Hey what are you doing here!");
-  console.log(`
+console.log(`
   --_-_-_-_---
    -_-_-_
     -_-_-
@@ -206,40 +263,6 @@ console.log("Hey what are you doing here!");
    _-
    -_
     _-_
-  `)
-
-  var map = L.map('map').setView([52.560556, -1.470278], 5);
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
-
-  function invalmap() {
-    setTimeout(function() {
-      map.invalidateSize()
-    }, 300); 
-  }
-  map.invalidateSize()
-
-  var funnelCloudMarker = L.icon({
-    iconUrl: './images/report-map-ico/funnel-cloud.webp',
-
-    iconSize:     [24, 24],
-    iconAnchor:   [12, 10],
-});
-
-var damagingLightningMarker = L.icon({
-    iconUrl: './images/report-map-ico/damaging-lightning.webp',
-
-    iconSize:     [24, 24],
-    iconAnchor:   [12, 10],
-});
-
-var floodingMarker = L.icon({
-    iconUrl: './images/report-map-ico/flooding.webp',
-
-    iconSize:     [24, 24],
-    iconAnchor:   [12, 10],
-});
+`)
 </script>
-<script src="./scripts/markers.js"></script>
        

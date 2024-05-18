@@ -2,6 +2,28 @@ body {
     background-color: rgb(18, 18, 18);
 }
 
+hr.rounded {
+    border-top: 3px solid rgb(30, 30, 31);
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.button {
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    height: 35px;
+    line-height: 7px;
+    cursor: pointer;
+}
+
 div.main-content-area {
   border-radius: 25px;
   float: left; 
@@ -16,6 +38,19 @@ div.main-content-area {
   overflow: auto;
 }
 
+div.wx-report-key {
+    border-radius: 25px;
+    float: right; 
+    margin-left: 25px;
+    width: 250px;
+    height: 435px;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+    background-color: rgb(18, 18, 18);
+    overflow: auto;
+}
 
 div.twt-content-area {
     border-radius: 25px;
@@ -47,6 +82,20 @@ div.twt-content-area {
     color: white;
     transition: 0.3s;
     width: 20%;
+}
+
+.b-card {
+    float:left;
+    margin-top: 340px;
+    margin-left: -1006px;
+    border-radius: 25px;
+    color: white;
+    transition: 0.3s;
+    width: 20%;
+}
+
+.b-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
   
 .card:hover {
@@ -118,6 +167,16 @@ div.twt-content-area {
     width: 27%;
 }
 
+.card-image-video {
+    margin-top: 34px;
+    float:left;
+    margin-left: 185px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    transition: 0.3s;
+    width: 27%;
+}
+
 .container-image {
     padding: 2px 16px;
 }
@@ -126,4 +185,20 @@ ul.list-box {
     padding-top: 18px;
     list-style-type: square; 
     color: white;
+}
+
+::-moz-selection {
+    color: black;
+    background: orange;
+}
+  
+::selection {
+    color: black;
+    background: orange;
+}
+
+.leaflet-control-layers,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
