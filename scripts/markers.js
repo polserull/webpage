@@ -51,11 +51,11 @@ var floodingLayer = L.layerGroup();
 L.marker([52.813749, -1.637174], {icon: funnelCloudMarker}).addTo(funnelCloudLayer).bindPopup(`<pre>Possible Funnel Cloud 
 Location: Over Burton upon Trent 
 [52.813749, -1.637174] [06-05-24 6:34BST]
-Source: Twitter | <a href="https://twitter.com/sodafalls/status/1787536503842668729?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1787536503842668729%7Ctwgr%5E0062d3ab9c1da29e6ff51148a63fd22cfa43a6bb%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.torro.org.uk%2FIPS%2Findex.php%3Fapp%3Dcoremodule%3Dsystemcontroller%3Dembedurl%3Dhttps%3A%2F%2Ftwitter.com%2Fsodafalls%2Fstatus%2F1787536503842668729" target="_blank">Source</a></pre>`);
+Source: Twitter | <a href="https://x.com/sodafalls/status/1787536503842668729" target="_blank">Source</a></pre>`);
 L.marker([52.774867077656864, -1.557549742237998], {icon: funnelCloudMarker}).addTo(funnelCloudLayer).bindPopup(`<pre>Possible Funnel Cloud 
 Location: Swadlincote, Derbyshire 
 [52.774867077656864, -1.557549742237998] [06-05-24 7:12BST]
-Source: Twitter | <a href="https://twitter.com/uktornados/status/1787546069720514730?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1787546069720514730%7Ctwgr%5Ef701bb51e263063d25d14837ecad57d9136e12c1%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.torro.org.uk%2FIPS%2Findex.php%3Fapp%3Dcoremodule%3Dsystemcontroller%3Dembedurl%3Dhttps%3A%2F%2Ftwitter.com%2Fuktornados%2Fstatus%2F1787546069720514730" target="_blank">Source</a></pre>`);
+Source: Twitter | <a href="https://x.com/uktornados/status/1787546069720514730" target="_blank">Source</a></pre>`);
 L.marker([54.66109117051964, -2.2028157305819076], {icon: funnelCloudMarker}).addTo(funnelCloudLayer).bindPopup(`<pre>Possible Funnel Cloud
 Estimate Location: B6277 Highway 
 [54.66109117051964, -2.2028157305819076] [06-05-24 15:30BST]
@@ -63,7 +63,7 @@ Source: Facebook | <a href="https://www.facebook.com/watch/?v=746529750837359" t
 L.marker([51.77368325105944, -3.245661634061207], {icon: funnelCloudMarker}).addTo(funnelCloudLayer).bindPopup(`<pre>Possible Funnel Cloud 
 Location: Tredegar
 [51.77368325105944, -3.245661634061207] [07-05-24 16:40BST]
-Source: Twitter | <a href="https://twitter.com/McCarthyKarl/status/1787873989118873753?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1787873989118873753%7Ctwgr%5E9011092b919548078e0209e85ed21b27a852802a%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.torro.org.uk%2FIPS%2Findex.php%3Fapp%3Dcoremodule%3Dsystemcontroller%3Dembedurl%3Dhttps%3A%2F%2Ftwitter.com%2FMcCarthyKarl%2Fstatus%2F1787873989118873753" target="_blank">Source</a></pre>`);
+Source: Twitter | <a href="https://x.com/McCarthyKarl/status/1787873989118873753" target="_blank">Source</a></pre>`);
 L.marker([51.668376663548166, -4.709275272505088], {icon: funnelCloudMarker}).addTo(funnelCloudLayer).bindPopup(`<pre>Possible Funnel Cloud 
 Estimate Location: Tenby Golf Club, Tenby
 [51.668376663548166, -4.709275272505088] [16-05-24 14:20BST]
@@ -71,7 +71,11 @@ Source: Twitter | <a href="https://twitter.com/RECEPTOR17/status/179111055694802
 L.marker([52.573892365247, -0.27488640541446], {icon: funnelCloudMarker}).addTo(funnelCloudLayer).bindPopup(`<pre>Possible Funnel Cloud 
 Estimate Location: West Peterborough
 [52.573892365247, -0.27488640541446] [17-05-24 17:20BST]
-Source: Twitter | <a href="https://x.com/CFBBritBaller/status/1791506424947765449?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1791506424947765449%7Ctwgr%5E39714be2e6c99f4fc35c0a15e121f04cbfcb1cee%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.torro.org.uk%2FIPS%2Findex.php%3Fapp%3Dcoremodule%3Dsystemcontroller%3Dembedurl%3Dhttps%3A%2F%2Fx.com%2Fcfbbritballer%2Fstatus%2F1791506424947765449%3Fs%3D46" target="_blank">Source</a></pre>`);
+Source: Twitter | <a href="https://x.com/CFBBritBaller/status/1791506424947765449" target="_blank">Source</a></pre>`);
+L.marker([50.57923316731807, -3.9248662502410916], {icon: funnelCloudMarker}).addTo(funnelCloudLayer).bindPopup(`<pre>Possible Funnel Cloud 
+Estimate Location: Dartmoor National Park, Dartmoor
+[50.57923316731807, -3.9248662502410916] [18-05-24 15:35BST]
+Source: Twitter | <a href="https://x.com/Chris38bell/status/1792599614383657328" target="_blank">Source</a></pre>`);
 
 L.marker([51.49774320425926, -0.6369741664371422], {icon: damagingLightningMarker}).addTo(damagingLightningLayer).bindPopup(`<pre>Damaging Lightning
 Estimate Location: Eton Wick
@@ -93,6 +97,10 @@ L.marker([53.60835803921186, -2.314070824203321], {icon: damagingLightningMarker
 Location: Lepp Crescent, Bury
 [53.60835803921186, -2.314070824203321] [12-05-24 20:30BST]
 Source: News | <a href="https://www.manchestereveningnews.co.uk/news/greater-manchester-news/we-saw-big-ball-white-29161139" target="_blank">Source</a></pre>`);
+L.marker([50.672446384389026, -2.1069640699260357], {icon: damagingLightningMarker}).addTo(damagingLightningLayer).bindPopup(`<pre>Damaging Lightning
+Location: Wareham, Dorset
+[50.672446384389026, -2.1069640699260357] [20-05-24 N/A]
+Source: News | <a href="https://www.bbc.co.uk/news/articles/cxxxknp24yjo" target="_blank">Source</a></pre>`);
 
 L.marker([57.310200010485474, -2.6233588484252075], {icon: floodingMarker}).addTo(floodingLayer).bindPopup(`<pre>Flooding
 Estimate Location: Auchleven, Aberdeenshire 
