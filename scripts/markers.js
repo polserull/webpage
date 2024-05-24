@@ -101,6 +101,10 @@ L.marker([50.672446384389026, -2.1069640699260357], {icon: damagingLightningMark
 Location: Wareham, Dorset
 [50.672446384389026, -2.1069640699260357] [20-05-24 N/A]
 Source: News | <a href="https://www.bbc.co.uk/news/articles/cxxxknp24yjo" target="_blank">Source</a></pre>`);
+L.marker([52.384624472028904, 1.103887297614344], {icon: damagingLightningMarker}).addTo(damagingLightningLayer).bindPopup(`<pre>Damaging Lightning
+Location: Roydon, Norfolk
+[52.384624472028904, 1.103887297614344] [21-05-24 14:36BST]
+Source: News | <a href="https://www.edp24.co.uk/news/24336182.house-struck-lightning-roydon-storms-hit-norfolk/" target="_blank">Source</a></pre>`);
 
 L.marker([57.310200010485474, -2.6233588484252075], {icon: floodingMarker}).addTo(floodingLayer).bindPopup(`<pre>Flooding
 Estimate Location: Auchleven, Aberdeenshire 
