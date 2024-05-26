@@ -169,6 +169,60 @@ ul.list-box {
   filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
 }
 
+.carousel-container {
+    padding-bottom: 10px;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    display: flex;
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: rgb(18, 18, 18);
+    border-radius: 25px;
+    color: white;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+#prevButton {
+    left: 10px;
+}
+
+#nextButton {
+    right: 10px;
+}
+
+.item-image {
+    border-radius: 25px;
+    max-width: 132px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.item-content {
+    flex: 1; 
+}
+
 @media only screen and (max-width: 600px) {
     div.main-content-area {
         border-radius: 25px;

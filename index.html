@@ -240,6 +240,13 @@
     <div id="WX Events" class="tabcontent">
         <h1 style="color: white;">Weather Events</h1>
         <p style="color: white;">If you come across tornadoes, funnel clouds, damaging winds or any other weather events if safe to do so take a picture and record the time, please report here: <a href="https://www.torro.org.uk/severe-weather-report" target="_blank">TORRO</a>. [Not Associated]</p>
+        <div class="carousel-container">
+          <div class="carousel" id="carousel">
+            
+          </div>
+        <button class="carousel-button" id="prevButton">&lt;</button>
+        <button class="carousel-button" id="nextButton">&gt;</button>
+        </div>
         <div id="map" class="event-map"></div>
         <div class="wx-report-key">
           <img src="./images/report-map-ico/funnel-cloud.webp" style="width:50px; height:50px" alt="Possible Funnel Cloud Marker"></img>
@@ -268,6 +275,7 @@
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 <script src="./scripts/markers.js"></script>
+<script src="./scripts/warningsfeed.js"></script>
 
 <script>
     function openPage(pageName,elmnt) {
