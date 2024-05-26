@@ -29,16 +29,18 @@ div.main-content-area {
   float: left; 
   margin-left: 25px;
   width: 65%;
-  height: 570px;
   padding-left: 25px;
   padding-top: 25px;
   padding-right: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
   box-sizing: border-box;
   background-color: rgb(30, 30, 31);
   overflow: auto;
 }
 
 div.event-map {
+    margin-bottom: 15px;
     float:left; 
     height:435px; 
     width:76%; 
@@ -170,7 +172,7 @@ ul.list-box {
 }
 
 .carousel-container {
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     position: relative;
     width: 100%;
     margin: 0 auto;
@@ -214,13 +216,26 @@ ul.list-box {
 
 .item-image {
     border-radius: 25px;
-    max-width: 132px;
+    max-width: 15%;
     height: auto;
     margin-right: 20px;
 }
 
 .item-content {
     flex: 1; 
+}
+
+div.estofex-forecast {
+    border-radius: 25px;
+    float: left; 
+    width: 76%;
+    height: 450px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    box-sizing: border-box;
+    background-color: rgb(18, 18, 18);
+    overflow: auto;
 }
 
 @media only screen and (max-width: 600px) {

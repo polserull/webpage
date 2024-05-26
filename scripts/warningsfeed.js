@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const RSS_URL = 'https://www.metoffice.gov.uk/public/data/PWSCache/WarningsRSS/Region/UK';  // Replace with your RSS feed URL
+    const RSS_URL = 'https://www.metoffice.gov.uk/public/data/PWSCache/WarningsRSS/Region/UK';
     const carousel = document.getElementById('carousel');
     let currentIndex = 0;
 
@@ -22,11 +22,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 <div class="item-content">
                     <h2>${item.title}</h2>
                     <p>${item.description}</p>
-                    <a href="${item.link}" target="_blank">Read more</a>
+                    <a href="${item.link}" target="_blank"><button class="button" style="background-color: #ffe915; color: black;">View on MET Office</button></a>
                 </div>
             `;
             
-            // Check if there's an image in the item
             if (item.enclosure && item.enclosure.link) {
                 content = `<img src="${item.enclosure.link}" alt="${item.title}" class="item-image">` + content;
             }
