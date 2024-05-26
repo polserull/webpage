@@ -1,4 +1,4 @@
-fetch('http://www.estofex.org/cgi-bin/polygon/showforecast.cgi?xml=yes')
+fetch('https://www.estofex.org/cgi-bin/polygon/showforecast.cgi?xml=yes')
   .then(response => response.text())
   .then(str => new window.DOMParser().parseFromString(str, "text/xml"))
   .then(data => {
