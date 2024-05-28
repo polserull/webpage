@@ -105,6 +105,11 @@ L.marker([52.384624472028904, 1.103887297614344], {icon: damagingLightningMarker
 Location: Roydon, Norfolk
 [52.384624472028904, 1.103887297614344] [21-05-24 14:36BST]
 Source: News | <a href="https://www.edp24.co.uk/news/24336182.house-struck-lightning-roydon-storms-hit-norfolk/" target="_blank">Source</a></pre>`);
+L.marker([52.518148043447795, 1.0174768712659032], {icon: damagingLightningMarker}).addTo(damagingLightningLayer).bindPopup(`<pre>Damaging Lightning
+Location: Church St, Attleborough
+[52.518148043447795, 1.0174768712659032] [26-05-24 14:27BST]
+Source: News | <a href="https://www.edp24.co.uk/news/24347031.property-struck-lightning-church-street-attleborough/" target="_blank">Source</a></pre>`);
+
 
 L.marker([57.310200010485474, -2.6233588484252075], {icon: floodingMarker}).addTo(floodingLayer).bindPopup(`<pre>Flooding
 Estimate Location: Auchleven, Aberdeenshire 
@@ -128,5 +133,38 @@ var overlayMaps = {
     "Damaging Wind": damagingWindLayer,
     "Flooding": floodingLayer
 };
+
+const legend = L.control.Legend({
+    position: "bottomleft",
+    collapsed: false, 
+    symbolWidth: 32,
+    opacity: 1, 
+    column: 1,
+    legends: [{
+        label: "Funnel Clouds",
+        type: "image",
+        url: "./images/report-map-ico/funnel-cloud.webp"
+    },
+    {
+        label: "Damaging Lightning",
+        type: "image",
+        url: "./images/report-map-ico/damaging-lightning.webp",
+    },
+    {
+        label: "Damaging Hail",
+        type: "image",
+        url: "./images/report-map-ico/damaging-hail.webp"
+    },
+    {
+        label: "Damaging Wind",
+        type: "image",
+        url: "./images/report-map-ico/damaging-wind.webp"
+    }, 
+    {
+        label: "Flooding",
+        type: "image",
+        url: "./images/report-map-ico/flooding.webp"
+    }]
+}).addTo(map);
 
 L.control.layers(null, overlayMaps, {collapsed: false}).addTo(map);

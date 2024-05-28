@@ -11,9 +11,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-  crossorigin=""/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <link rel="stylesheet" href="./scripts/leaflet.legend.css">
   <link rel="stylesheet" href="./scripts/style.css">
 </head>
 
@@ -23,11 +22,11 @@
         <a class="navbar-brand" href="javascript:openPage('Home', this)">pølserull</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="javascript:openPage('Home', this)" id="defaultOpen">Home</a></li>
+        <li><a href="javascript:openPage('Home', this)" id="defaultOpen">Home</a></li>
         <li><a href="javascript:openPage('Projects', this)">Projects</a></li>
         <li><a href="javascript:openPage('Coursework', this)">Coursework</a></li>
-        <li><a href="javascript:openPage('WX Events', this)">UK WX Events</a></li>
         <li><a href="javascript:openPage('Pictures', this)">Pictures</a></li>
+        <li><a href="javascript:openPage('UK Weather', this)">UK Weather</a></li>
       </ul>
     </div>
 </nav>
@@ -41,7 +40,15 @@
 <div class="main-content-area">
     <div id="Home" class="tabcontent">
         <h1 style="color: white; padding-left: 8px;">About Me</h1>
+        <hr class="rounded-header"></hr>
         <image src="./images/pfp.webp" alt="my profile picture" style="width: 182px; height: 175px; float: left; margin-right: 35px;"></image>
+        <div class="socials-box">
+          <a href="https://x.com/_polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Twitter</button></a>
+          <a href="https://github.com/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Github</button></a>
+          <a href="https://steamcommunity.com/id/polserull/" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Steam</button></a>
+          <a href="https://modrinth.com/user/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Modrinth</button></a>
+          <a href="https://ko-fi.com/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">KO-FI</button></a>
+        </div>
         <ul class="list-box">
             <li>My general intrests are Software Development & Meteorology.</li>
             <li>Currently a Student.</li>
@@ -49,14 +56,7 @@
             <li>Favorite Bands: Rammstein, Rammstein and Rammstein.</li>
             <li>I do some Game Dev mainly making Working R6 Concept Gadgets from other peoples concepts.</li>
             <li>My best projects are the European Railways Addon and the UK Outlook Creator.</li>
-            <li>My next project is either a TCP chat-application</li>
         </ul>
-        <br>
-        <a href="https://x.com/_polserull" target="_blank"><button class="button" style="background-color: #249ef0;">Twitter</button></a>
-        <a href="https://github.com/polserull" target="_blank"><button class="button" style="background-color: black;">Github</button></a>
-        <a href="https://steamcommunity.com/id/polserull/" target="_blank"><button class="button" style="background-color: #102148;">Steam</button></a>
-        <a href="https://modrinth.com/user/polserull" target="_blank"><button class="button" style="background-color: #22da6f;">Modrinth</button></a>
-        <a href="https://ko-fi.com/polserull" target="_blank"><button class="button" style="background-color: #ff6360;">KO-FI</button></a>
     </div>
     
     <div id="Projects" class="tabcontent">
@@ -65,75 +65,95 @@
             <img src="./images/projects/outlook-creator.webp" alt="Outlook Creator Icon" style="width:100%; border-radius: 25px;">
             <div class="container">
               <p style="font-size: 16px; padding-top: 10px;"><b>UK Weather Outlook Creator</b></p> 
-              <p style="color: gray;">Released - Github - Java</p> 
+              <span class="badge bg-secondary">Software</span>
+              <span class="badge bg-secondary">Github</span>
+              <span class="badge bg-secondary">Java</span>
+              <span class="badge bg-secondary">MIT</span>
+              <span class="badge bg-secondary">1.0.0</span>
             </div>
         </a></li>
         <li class="proj-li"><a href="javascript:openPage('European Railways Addon', this)">
             <img src="./images/projects/euaddon.webp" alt="European Railways Addon Icon" style="width:100%; border-radius: 25px;">
             <div class="container">
               <p style="font-size: 16px; padding-top: 10px;"><b>European Railways Addon</b></p> 
-              <p style="color: gray;">Minecraft Mod - Java</p> 
+              <span class="badge bg-secondary">Minecraft Mod Addon</span>
+              <span class="badge bg-secondary">Modrinth</span>
+              <span class="badge bg-secondary">Java</span> 
+              <span class="badge bg-secondary">MIT</span>
+              <span class="badge bg-secondary">0.2.1</span>
             </div>
         </a></li>
         <li class="proj-li"><a href="https://github.com/TalonFloof/EnhancedWeather" target="_blank">
             <img src="./images/projects/enhanced-weather.webp" alt="European Railways Addon Icon" style="width:100%; border-radius: 25px;">
             <div class="container">
               <p style="font-size: 16px; padding-top: 10px;"><b>Enhanced Weather</b></p> 
-              <p style="color: gray;">By TalonFloof - Contributed</p> 
+              <span class="badge bg-secondary">Minecraft Mod</span>
+              <span class="badge bg-secondary">Contribution</span>
+              <a href="https://github.com/TalonFloof" target="_blank"><span class="badge bg-secondary">By TalonFloof</span></a>
+              <span class="badge bg-secondary">MIT</span>
             </div>
         </a></li>
         <li class="proj-li"><a href="https://x.com/_polserull/status/1787454009483186611" target="_blank">
           <img src="./images/projects/shiva-gadget-concept.webp" alt="Shiva Operator R6 Concept Icon" style="width:100%; border-radius: 25px;">
           <div class="container">
             <p style="font-size: 16px; padding-top: 10px;"><b>Shiva Gadget Concept</b></p> 
-            <p style="color: gray;">Operator By: @Oryx_Elite - Unity - C#</p> 
+            <span class="badge bg-secondary">Unity C#</span>
+            <a href="https://x.com/Oryx_Elite" target="_blank"><span class="badge bg-secondary">Concept by: @Oryx_Elite</span></a>
           </div>
         </a></li>
-      </ul>
-      <ul class="proj">
         <li class="proj-li"><a href="https://x.com/_polserull/status/1786587729876205704" target="_blank">
           <img src="./images/projects/yamuy-gadget-concept.webp" alt="European Railways Addon Icon" style="width:100%; border-radius: 25px;">
           <div class="container">
             <p style="font-size: 16px; padding-top: 10px;"><b>Yamuy Gadget Concept</b></p> 
-            <p style="color: gray;">Operator By: @Kaimento - Unity - C#</p> 
+            <span class="badge bg-secondary">Unity C#</span>
+            <a href="https://x.com/Kaimento" target="_blank"><span class="badge bg-secondary">Concept by: @Kaimento</span></a>
           </div>
         </a></li>
-    </ul>
+        </ul>
     </div>
 
     <div id="UK Weather Outlook Creator" class="tabcontent">
       <image src="./images/projects/outlook-creator.webp" alt="UK Outlook Creator Icon" style="width: 182px; height: 182px; float: left; margin-right: 35px; border-radius: 25px;"></image>
+      <div class="socials-box">
+        <a href="https://github.com/polserull/Outlook-Creator/releases" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31);">Download</button></a>
+        <a href="https://github.com/polserull/Outlook-Creator" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31);">Github</button></a>
+        <a href="https://ko-fi.com/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31);">KO-FI</button></a>
+      </div>
         <ul class="list-box">
             <li>UK Weather Outlook Creator - 1.0.0</li>
             <li>Made in Java and released on Github under the MIT Licence.</li>
-            <li>Used to create weather risk outlooks for the UK and Ireland.</li>
+            <li>Used to create weather outlooks for the UK and Ireland.</li>
             <li>Only to be used for Research or Educational purposes only.</li>
         </ul>
         <br>
-        <a href="https://github.com/polserull/Outlook-Creator/releases" target="_blank"><button class="button" style="background-color: #249ef0;">Download</button></a>
-        <a href="https://github.com/polserull/Outlook-Creator" target="_blank"><button class="button" style="background-color: black;">Github</button></a>
     </div>
 
     <div id="European Railways Addon" class="tabcontent">
       <a href="https://bisecthosting.com/polse" target="_blank"><image src="https://www.bisecthosting.com/partners/custom-banners/bc07a428-927e-4ff7-b41f-d3c4397fc2cd.webp" style="float: left; margin-right: 25px; border-radius: 25px;"></image></a>
       <image src="./images/projects/euaddon.webp" alt="UK Outlook Creator Icon" style="width: 182px; height: 182px; float: left; margin-right: 35px; border-radius: 25px;"></image>
+      <div class="socials-box">
+        <a href="https://modrinth.com/mod/european-railways-addon" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Download</button></a>
+        <a href="https://github.com/polserull/European-Railways-Addon" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Github</button></a>
+        <a href="https://discord.gg/tNA4HbeHKV" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Discord</button></a>
+        <a href="https://ko-fi.com/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">KO-FI</button></a>
+        <a href="https://crowdin.com/project/european-railways-addon" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Crowdin</button></a>
+      </div>
         <ul class="list-box">
-            <li>European Railways Addon - 0.2.0</li>
+            <li>European Railways Addon - 0.2.1</li>
             <li>Made in Java and released on Github under the MIT Licence.</li>
-            <li>An addon for the MTR Mod for Minecraft.</li>
+            <li>An addon for the MTR Mod for Minecraft that adds stuff from european railways.</li>
             <li>Made by me the idea came from szandorthe13th.</li>
-            <li>Currently at over 2K Downloads :D</li>
+            <li>Translated into German, Spanish, Russian and Croation.</li>
+            <li>Translators: szandorthe13th, balazskis, JustNoone, Dave_2911_ and LtSerg.
+            <li>Currently at 2.2K Downloads :D</li>
         </ul>
         <br>
-        <a href="https://modrinth.com/mod/european-railways-addon" target="_blank"><button class="button" style="background-color: #249ef0;">Download</button></a>
-        <a href="https://github.com/polserull/European-Railways-Addon" target="_blank"><button class="button" style="background-color: black;">Github</button></a>
-        <a href="https://discord.gg/tNA4HbeHKV" target="_blank"><button class="button" style="background-color: #249ef0;">Discord</button></a>
     </div>
 
     <div id="Coursework" class="tabcontent">
       <ul class="proj">
         <li class="proj-li"><a href="javascript:openPage('Coursework One', this)">
-            <img src="./images/projects/outlook-creator.webp" alt="Outlook Creator Icon" style="width:100%; border-radius: 25px;">
+            <img src="./images/na.png" alt="Outlook Creator Icon" style="width:100%; border-radius: 25px;">
             <div class="container">
               <p style="font-size: 16px; padding-top: 10px;"><b>IT & Media -  College</b></p> 
               <p style="color: gray;">Unit 12</p> 
@@ -144,7 +164,7 @@
     </div>
 
     <div id="Coursework One" class="tabcontent">
-      <image src="#" alt="UK Outlook Creator Icon" style="width: 182px; height: 182px; float: left; margin-right: 35px; border-radius: 25px;"></image>
+      <image src="./images/na.png" alt="UK Outlook Creator Icon" style="width: 182px; height: 182px; float: left; margin-right: 35px; border-radius: 25px;"></image>
       <ul class="list-box">
           <li>Had to create a currency converter in python.</li>
           <li>Achived Grade -> Merit</li>
@@ -160,65 +180,65 @@
         <div class="content">
           <ul class="img-ul">
             <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_145937.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_145937.webp" alt="Snapped Tree Damage" style="width:125%; border-radius: 15px;">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_145937.webp" alt="Snapped Tree Damage" style="width:100%; border-radius: 15px;">
                 <div class="container-image">
                   <p style="font-size: 16px; padding-top: 10px;"><b>Snapped Tree</b></p> 
                 </div>
             </a></li>
             <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150035.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150035.webp" alt="Sheet Metal Damage" style="width:125%; border-radius: 15px;">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150035.webp" alt="Sheet Metal Damage" style="width:100%; border-radius: 15px;">
                 <div class="container-image">
                   <p style="font-size: 16px; padding-top: 10px;"><b>Sheet Metal Damage</b></p> 
                 </div>
             </a></li></ul>
             <ul class="img-ul">
             <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150211.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150211.webp" alt="Damaged Roof Tiles" style="width:125%; border-radius: 15px;">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150211.webp" alt="Damaged Roof Tiles" style="width:100%; border-radius: 15px;">
                 <div class="container-image">
                   <p style="font-size: 16px; padding-top: 10px;"><b>Damaged Roof Tiles</b></p> 
                 </div>
             </a></li>
             <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150215.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150215.webp" alt="Damaged Roof Tiles" style="width:125%; border-radius: 15px;">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150215.webp" alt="Damaged Roof Tiles" style="width:100%; border-radius: 15px;">
                 <div class="container-image">
                   <p style="font-size: 16px; padding-top: 10px;"><b>Damaged Roof Tiles</b></p> 
                 </div>
             </a></li></ul>
             <ul class="img-ul">
             <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150730.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150730.webp" alt="Damaged Fence" style="width:125%; border-radius: 15px;">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150730.webp" alt="Damaged Fence" style="width:100%; border-radius: 15px;">
                 <div class="container-image">
                   <p style="font-size: 16px; padding-top: 10px;"><b>Damaged Fence</b></p> 
                 </div>
             </a></li>
             <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150739.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150739.webp" alt="Collapsed Chimney & Severe Roof Damage" style="width:125%; border-radius: 15px;">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150739.webp" alt="Collapsed Chimney & Severe Roof Damage" style="width:100%; border-radius: 15px;">
                 <div class="container-image">
                   <p style="font-size: 16px; padding-top: 10px;"><b>Collapsed Chimney & Severe Roof Damage</b></p> 
                 </div>
             </a></li></ul>
             <ul class="img-ul">
             <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.webp" alt="Missing Roof Tiles" style="width:125%; border-radius: 15px;">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.webp" alt="Missing Roof Tiles" style="width:100%; border-radius: 15px;">
                 <div class="container-image">
                   <p style="font-size: 16px; padding-top: 10px;"><b>Missing Roof Tiles</b></p> 
                 </div>
             </a></li>
             <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150938.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150938.webp" alt="Missing Roof Tiles" style="width:125%; border-radius: 15px;">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150938.webp" alt="Missing Roof Tiles" style="width:100%; border-radius: 15px;">
                 <div class="container-image">
                   <p style="font-size: 16px; padding-top: 10px;"><b>Missing Roof Tiles</b></p> 
                 </div>
             </a></li></ul>
             <ul class="img-ul">
             <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/wx-download.zip" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_145937.webp" alt="ZIP DOWNLOAD" style="width:125%; border-radius: 15px;">
+                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_145937.webp" alt="ZIP DOWNLOAD" style="width:100%; border-radius: 15px;">
                 <div class="container-image">
                   <p style="font-size: 16px; padding-top: 10px;"><b>Zip File Download</b></p> 
                 </div>
             </a></li>
             <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.webp" target="_blank">
-              <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.webp" alt="" style="width:125%; border-radius: 15px;">
+              <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.webp" alt="" style="width:100%; border-radius: 15px;">
               <div class="container-image">
                 <p style="font-size: 16px; padding-top: 10px;"><b></b></p> 
               </div>
@@ -227,43 +247,24 @@
         </div>
     </div>
 
-    <div id="WX Events" class="tabcontent">
-        <h1 style="color: white;">Weather Events</h1>
-        <p style="color: white;">If you come across tornadoes, funnel clouds, damaging winds or any other weather events if safe to do so take a picture and record the time, please report here: <a href="https://www.torro.org.uk/severe-weather-report" target="_blank">TORRO</a>. [Not Associated]</p>
+    <div id="UK Weather" class="tabcontent">
+        <h1 style="color: white;">UK Weather</h1>
+        <hr class="rounded-header"></hr>
+        <!--<p style="color: white;">If you come across tornadoes, funnel clouds, damaging winds or any other weather events if safe to do so take a picture and record the time, please report here: <a href="https://www.torro.org.uk/severe-weather-report" target="_blank">TORRO</a>. [Not Associated]</p>-->
         <div class="carousel-container">
           <div class="carousel" id="carousel">
-            
           </div>
         <button class="carousel-button" id="prevButton">&lt;</button>
         <button class="carousel-button" id="nextButton">&gt;</button>
         </div>
         <div id="map" class="event-map"></div>
-        <div class="wx-report-key">
-          <img src="./images/report-map-ico/funnel-cloud.webp" style="width:50px; height:50px" alt="Possible Funnel Cloud Marker"></img>
-          <h6 style="float: right; color:white; margin-right: 24px; margin-top: 18px;">Possible Funnel Cloud</h6>
-          <hr class="rounded"></hr>
-          <img src="./images/report-map-ico/damaging-lightning.webp" style="width:50px; height:50px" alt="Damaging Lightning Marker"></img>
-          <h6 style="float: right; color:white; margin-right: -8px; margin-top: 18px;">Damaging Lightning Incident</h6>
-          <hr class="rounded"></hr>
-          <img src="./images/report-map-ico/damaging-hail.webp" style="width:50px; height:50px" alt="Damaging Hail Marker"></img>
-          <h6 style="float: right; color:white; margin-right: 19px; margin-top: 18px;">Damaging Hail Incident</h6>
-          <hr class="rounded"></hr>
-          <img src="./images/report-map-ico/damaging-wind.webp" style="width:50px; height:50px" alt="Damaging Wind Marker"></img>
-          <h6 style="float: right; color:white; margin-right: 11px; margin-top: 18px;">Damaging Wind Incident</h6>
-          <hr class="rounded"></hr>
-          <img src="./images/report-map-ico/flooding.webp" style="width:50px; height:50px" alt="Flooding Marker"></img>
-          <h6 style="float: right; color:white; margin-right: 96px; margin-top: 18px;">Flooding</h6>
-        </div>
     </div>
-</div>
-
-<div class="twt-content-area">
-    <a class="twitter-timeline" href="https://twitter.com/_polserull?ref_src=twsrc%5Etfw" data-theme="dark" data-height="520" data-with="100%">Tweets by _polserull</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </body>
 </html>
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script src="./scripts/leaflet.legend.js"></script>
 <script src="./scripts/markers.js"></script>
 <script src="./scripts/warningsfeed.js"></script>
 

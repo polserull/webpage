@@ -9,6 +9,13 @@ hr.rounded {
     margin-bottom: 8px;
 }
 
+hr.rounded-header {
+    border-top: 3px solid rgb(18, 18, 18);
+    border-radius: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
 .button {
     border-radius: 10px;
     border: none;
@@ -19,6 +26,7 @@ hr.rounded {
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
+    width: 98%;
     height: 35px;
     line-height: 7px;
     cursor: pointer;
@@ -26,14 +34,13 @@ hr.rounded {
 
 div.main-content-area {
   border-radius: 25px;
-  float: left; 
   margin-left: 25px;
-  width: 65%;
+  margin-bottom: 25px;
+  width: 97.4%;
   padding-left: 25px;
   padding-top: 25px;
   padding-right: 25px;
   padding-bottom: 25px;
-  margin-bottom: 25px;
   box-sizing: border-box;
   background-color: rgb(30, 30, 31);
   overflow: auto;
@@ -42,8 +49,8 @@ div.main-content-area {
 div.event-map {
     margin-bottom: 15px;
     float:left; 
-    height:435px; 
-    width:76%; 
+    height:665px; 
+    width: 100%; 
     border-radius: 25px;
 }
 
@@ -61,18 +68,17 @@ div.wx-report-key {
     overflow: auto;
 }
 
-div.twt-content-area {
+div.socials-box {
     border-radius: 25px;
-    float: left; 
-    margin-right: 25px;
-    margin-left: 25px;
-    width: 29%;
-    height: 570px;
+    float: right; 
+    width: 250px;
+    height: 435px;
     padding-left: 25px;
-    padding-right: 25px;
     padding-top: 25px;
+    padding-right: 25px;
     box-sizing: border-box;
-    background-color: rgb(30, 30, 31);
+    background-color: rgb(18, 18, 18);
+    overflow: auto;
 }
 
 .header {
@@ -109,7 +115,7 @@ li.proj-li {
     z-index: 99;
     margin-bottom: 15px;
     border-radius: 15px;
-    background-color: #777;
+    background-color: rgb(18, 18, 18);
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -119,6 +125,18 @@ li.proj-li {
     text-align: left;
     outline: none;
     font-size: 15px;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2212";
 }
 
 ul.img-ul {
@@ -152,6 +170,7 @@ li.img-li {
 ul.list-box {
     padding-top: 18px;
     list-style-type: square; 
+    width: 60%;
     color: white;
 }
 
@@ -163,6 +182,25 @@ ul.list-box {
 ::selection {
     color: black;
     background: orange;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: rgb(18, 18, 18); 
+}
+   
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
 
 .leaflet-control-layers,
@@ -189,6 +227,7 @@ ul.list-box {
     flex: 0 0 100%;
     box-sizing: border-box;
     padding: 20px;
+    padding-left: 55px;
     background: rgb(18, 18, 18);
     border-radius: 25px;
     color: white;
@@ -216,26 +255,14 @@ ul.list-box {
 
 .item-image {
     border-radius: 25px;
-    max-width: 15%;
+    width: 136px;
     height: auto;
     margin-right: 20px;
+
 }
 
 .item-content {
     flex: 1; 
-}
-
-div.estofex-forecast {
-    border-radius: 25px;
-    float: left; 
-    width: 76%;
-    height: 450px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 25px;
-    box-sizing: border-box;
-    background-color: rgb(18, 18, 18);
-    overflow: auto;
 }
 
 @media only screen and (max-width: 600px) {

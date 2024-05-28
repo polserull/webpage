@@ -6,10 +6,18 @@ document.addEventListener('DOMContentLoaded', function () {
     async function fetchRSSFeed() {
         try {
             const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(RSS_URL)}`);
+            if (!response.ok) {
+                throw new Error(`Network response was not ok: ${response.statusText}`);
+            }
             const data = await response.json();
-            displayRSSItems(data.items);
+            if (!data.items || data.items.length === 0) {
+                displayRSSItems([{ title: 'No Warnings...', description: 'MET OFFICE has currently not issued any weather warnings.', link: 'https://www.metoffice.gov.uk/weather/warnings-and-advice/uk-warnings', enclosure: './images/na.png' }]);
+            } else {
+                displayRSSItems(data.items);
+            }
         } catch (error) {
             console.error('Error fetching RSS feed:', error);
+            displayRSSItems([{ title: 'No warnings', description: '', link: '', enclosure: null }]);
         }
     }
 
