@@ -76,6 +76,10 @@ L.marker([50.57923316731807, -3.9248662502410916], {icon: funnelCloudMarker}).ad
 Estimate Location: Dartmoor National Park, Dartmoor
 [50.57923316731807, -3.9248662502410916] [18-05-24 15:35BST]
 Source: Twitter | <a href="https://x.com/Chris38bell/status/1792599614383657328" target="_blank">Source</a></pre>`);
+L.marker([56.46432221795877, -2.97124724476383], {icon: funnelCloudMarker}).addTo(funnelCloudLayer).bindPopup(`<pre>Possible Funnel Cloud 
+Location: Dundee, Scotland
+[56.46432221795877, -2.97124724476383] [29-05-24 N/A]
+Source: News | <a href="https://www.thecourier.co.uk/fp/news/dundee/4995639/tornado-shaped-cloud-dundee/" target="_blank">Source</a></pre>`);
 
 L.marker([51.49774320425926, -0.6369741664371422], {icon: damagingLightningMarker}).addTo(damagingLightningLayer).bindPopup(`<pre>Damaging Lightning
 Estimate Location: Eton Wick
@@ -119,6 +123,10 @@ L.marker([52.41099743933818, -3.3476055264083038], {icon: floodingMarker}).addTo
 Estimate Location: A483, Llanbadarn Fynydd 
 [52.41099743933818, -3.3476055264083038] [12-05-24 19:00BST]
 Source: News | <a href="https://www.countytimes.co.uk/news/24314854.live-powys-flooding-latest-uk-thunderstorms/" target="_blank">Source</a></pre>`);
+L.marker([56.42360983613141, -3.3969448670551263], {icon: floodingMarker}).addTo(floodingLayer).bindPopup(`<pre>Flooding
+Location: Angus Rd, Scone 
+[56.42360983613141, -3.3969448670551263] [29-05-24 N/A]
+Source: News | <a href="https://www.thecourier.co.uk/fp/news/dundee/4995639/tornado-shaped-cloud-dundee/" target="_blank">Source</a></pre>`);
 
 funnelCloudLayer.addTo(map);
 damagingLightningLayer.addTo(map);
