@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				document.getElementById("wx-warning-text").innerText = " Weather Warnings in affect for the UK. ";
             }
         } catch (error) {
-            console.error('Error fetching RSS feed:', error);
+            console.error('Error fetching RSSS feed:', error);
         }
     }
     fetchRSSFeed();
