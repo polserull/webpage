@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./scripts/style.css">
 </head>
 
+<body>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -248,19 +249,33 @@
     </div>
 
     <div id="UK Weather" class="tabcontent">
-        <h1 style="color: white;">UK Weather</h1>
-        <hr class="rounded-header"></hr>
         <!--<p style="color: white;">If you come across tornadoes, funnel clouds, damaging winds or any other weather events if safe to do so take a picture and record the time, please report here: <a href="https://www.torro.org.uk/severe-weather-report" target="_blank">TORRO</a>. [Not Associated]</p>-->
-        <div class="carousel-container">
-          <div class="carousel" id="carousel">
-          </div>
-        <button class="carousel-button" id="prevButton">&lt;</button>
-        <button class="carousel-button" id="nextButton">&gt;</button>
-        </div>
+		<div class="met-office-warning-notif"> 
+		<img src="./images/icons/met-office-logo.jfif" style="margin-right: 15px; width: 3%; border-radius: 15px; float: left;"></img>
+		<a href="https://www.metoffice.gov.uk/weather/warnings-and-advice/uk-warnings" target="_blank"><h4 style="color: white; padding-top: 10px;" id="wx-warning-text"></h5></a>
+		</div>
+		<!--<div class="weather-station-data">
+		</div>-->
         <div id="map" class="event-map"></div>
     </div>
 </div>
 </body>
+<footer>
+<div class="footer-area">
+<div class="blinkies">
+<img src="https://adriansblinkiecollection.neocities.org/buttons/e5.gif"></img>
+<img src="https://adriansblinkiecollection.neocities.org/buttons/f15.gif"></img>
+<img src="https://adriansblinkiecollection.neocities.org/buttons/f16.gif" style="padding-top: 2px;"></img>
+<img src="https://adriansblinkiecollection.neocities.org/buttons/f24.jpg"></img>
+<img src="https://adriansblinkiecollection.neocities.org/buttons/c7.gif" style="padding-top: 2px;"></img>
+<img src="https://adriansblinkiecollection.neocities.org/buttons/a23.gif"></img>
+</div>
+<p style="color: white;">Created by pølserull.</p>
+<p style="color: white;">All images and content are licenced under ARR unless stated.</p>
+<p style="color: white;">Website Licenced under MIT. Not responsible for the content of external sites.</p>
+<p style="color: white;">Sources: <a href="https://www.metoffice.gov.uk/public/data/PWSCache/WarningsRSS/Region/UK" target="_blank">MET WARNINGS</a> | <a href="https://adriansblinkiecollection.neocities.org/" target="_blank">BLINKIES</a></p> 
+</div>
+</footer>
 </html>
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>

@@ -229,7 +229,7 @@
             this._link.href = "#";
 
             var title = L.DomUtil.create("h3", "leaflet-legend-title", this._contents);
-            title.innerText = this.options.title || "Legend";
+            title.innerText = this.options.title || "key";
 
             var len = this.options.legends.length;
             var colSize = Math.ceil(len / this.options.column);

@@ -10,63 +10,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 throw new Error(`Network response was not ok: ${response.statusText}`);
             }
             const data = await response.json();
-            if (!data.items || data.items.length === 0) {
-                displayRSSItems([{ title: 'No Warnings...', description: 'MET OFFICE has currently not issued any weather warnings.', link: 'https://www.metoffice.gov.uk/weather/warnings-and-advice/uk-warnings', enclosure: './images/na.png' }]);
+            if (!data.items || data.items.length === 0) { 
+				document.getElementById("wx-warning-text").innerText = " No Weather Warnings in affect for the UK. ";
             } else {
-                displayRSSItems(data.items);
+				document.getElementById("wx-warning-text").innerText = " Weather Warnings in affect for the UK. ";
             }
         } catch (error) {
             console.error('Error fetching RSS feed:', error);
-            displayRSSItems([{ title: 'No warnings', description: '', link: '', enclosure: null }]);
         }
     }
-
-    function displayRSSItems(items) {
-        items.forEach(item => {
-            const carouselItem = document.createElement('div');
-            carouselItem.className = 'carousel-item';
-            
-            let content = `
-                <div class="item-content">
-                    <h2>${item.title}</h2>
-                    <p>${item.description}</p>
-                    <a href="${item.link}" target="_blank"><button class="button" style="background-color: #ffe915; color: black;">View on MET Office</button></a>
-                </div>
-            `;
-            
-            if (item.enclosure && item.enclosure.link) {
-                content = `<img src="${item.enclosure.link}" alt="${item.title}" class="item-image">` + content;
-            }
-            
-            carouselItem.innerHTML = content;
-            carousel.appendChild(carouselItem);
-        });
-        updateCarousel();
-    }
-
-    function updateCarousel() {
-        const items = document.querySelectorAll('.carousel-item');
-        const totalItems = items.length;
-        const containerWidth = document.querySelector('.carousel-container').offsetWidth;
-        carousel.style.transform = `translateX(${-currentIndex * containerWidth}px)`;
-        
-        document.getElementById('prevButton').disabled = currentIndex === 0;
-        document.getElementById('nextButton').disabled = currentIndex === totalItems - 1;
-    }   
-
-    document.getElementById('prevButton').addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateCarousel();
-        }
-    });
-
-    document.getElementById('nextButton').addEventListener('click', () => {
-        if (currentIndex < document.querySelectorAll('.carousel-item').length - 1) {
-            currentIndex++;
-            updateCarousel();
-        }
-    });
-
     fetchRSSFeed();
 });
