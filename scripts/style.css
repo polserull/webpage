@@ -66,14 +66,46 @@ div.weather-station-data {
   border-radius: 25px;
   margin-top: 15px;
   margin-bottom: 15px;
-  width: 97.4%;
-  height: 170px;
+  width: 100%;
+  height: 264px;
+  padding-left: 25px;
+  padding-top: 5px;
+  padding-right: 25px;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+  background-color: rgb(18, 18, 18);
+}
+
+div.humid-temp-area {
+  float: left;
+  border-radius: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 14%;
+  height: 226px;
+  margin-right: 15px;
+  padding-left: 75px;
+  padding-top: 35px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+  background-color: rgb(30, 30, 31);
+}
+
+div.weather-station-addt {
+  float: left;
+  border-radius: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 24.87%;
+  height: 226px;
+  margin-right: 15px;
   padding-left: 25px;
   padding-top: 25px;
   padding-right: 25px;
   padding-bottom: 25px;
   box-sizing: border-box;
-  background-color: rgb(18, 18, 18);
+  background-color: rgb(30, 30, 31);
 }
 
 div.blinkies {
