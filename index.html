@@ -25,9 +25,8 @@
       <ul class="nav navbar-nav">
         <li><a href="javascript:openPage('Home', this)" id="defaultOpen">Home</a></li>
         <li><a href="javascript:openPage('Projects', this)">Projects</a></li>
-        <li><a href="javascript:openPage('Coursework', this)">Coursework</a></li>
         <li><a href="javascript:openPage('Pictures', this)">Pictures</a></li>
-        <li><a href="javascript:openPage('UK Weather', this)">UK Weather</a></li>
+        <li><a href="javascript:openPage('UK Weather', this)">UK Event Map</a></li>
       </ul>
     </div>
 </nav>
@@ -40,22 +39,20 @@
 
 <div class="main-content-area">
     <div id="Home" class="tabcontent">
-        <h1 style="color: white; padding-left: 8px;">About Me</h1>
-        <hr class="rounded-header"></hr>
-        <image src="./images/pfp.webp" alt="my profile picture" style="width: 182px; height: 175px; float: left; margin-right: 35px;"></image>
+        <image src="./images/pfp.webp" alt="PFP" style="width: 182px; height: 175px; float: left; margin-right: 35px;"></image>
         <div class="socials-box">
           <a href="https://x.com/_polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Twitter</button></a>
           <a href="https://github.com/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Github</button></a>
           <a href="https://steamcommunity.com/id/polserull/" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Steam</button></a>
           <a href="https://modrinth.com/user/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Modrinth</button></a>
+          <a href="https://cara.app/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Cara</button></a>
           <a href="https://ko-fi.com/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">KO-FI</button></a>
         </div>
         <ul class="list-box">
-            <li>My general intrests are Software Development & Meteorology.</li>
-            <li>Currently a Student.</li>
-            <li>Hopfully Upcoming Volunteer TORRO Site Investigator. (The Tornado And Storm Research Orginisation)</li>
+            <li>My intrests are Software Development & Meteorology.</li>
+            <li>Currently a Student, working on becoming a meterology student at the university of Reading.</li>
+            <li>Future volunteer TORRO site investigator. (The Tornado And Storm Research Orginisation)</li>
             <li>Favorite Bands: Rammstein, Rammstein and Rammstein.</li>
-            <li>I do some Game Dev mainly making Working R6 Concept Gadgets from other peoples concepts.</li>
             <li>My best projects are the European Railways Addon and the UK Outlook Creator.</li>
         </ul>
     </div>
@@ -151,31 +148,6 @@
         <br>
     </div>
 
-    <div id="Coursework" class="tabcontent">
-      <ul class="proj">
-        <li class="proj-li"><a href="javascript:openPage('Coursework One', this)">
-            <img src="./images/na.png" alt="Outlook Creator Icon" style="width:100%; border-radius: 25px;">
-            <div class="container">
-              <p style="font-size: 16px; padding-top: 10px;"><b>IT & Media -  College</b></p> 
-              <p style="color: gray;">Unit 12</p> 
-            </div>
-        </a></li>
-      </ul>
-    </ul>
-    </div>
-
-    <div id="Coursework One" class="tabcontent">
-      <image src="./images/na.png" alt="UK Outlook Creator Icon" style="width: 182px; height: 182px; float: left; margin-right: 35px; border-radius: 25px;"></image>
-      <ul class="list-box">
-          <li>Had to create a currency converter in python.</li>
-          <li>Achived Grade -> Merit</li>
-      </ul>
-      <br>
-      <a href="https://drive.google.com/file/d/1aiR-RBkEKKjjlR3UUqloTMrZizHDWZXe/view?usp=sharing" target="_blank"><button class="button" style="background-color: #249ef0;">View Program</button></a>
-      <a href="https://docs.google.com/document/d/1b7ZunW4xjuLznzGav0LhHYed7AqOfU5X/edit?usp=sharing&ouid=111758036074989323660&rtpof=true&sd=true" target="_blank"><button class="button" style="background-color: #249ef0;">View Word Document</button></a>
-      <a href="https://docs.google.com/presentation/d/1cslWOrhPmWO3hIz85pDcX-RgtJ7aHgbQ/edit?usp=sharing&ouid=111758036074989323660&rtpof=true&sd=true" target="_blank"><button class="button" style="background-color: #249ef0;">View Powerpoint</button></a>
-    </div>
-
     <div id="Pictures" class="tabcontent">
         <button type="button" class="collapsible">Suspected Tornado Damage or SLW - West Bridgford, Nottingham</button>
         <div class="content">
@@ -249,41 +221,17 @@
     </div>
 
     <div id="UK Weather" class="tabcontent">
-        <!--<p style="color: white;">If you come across tornadoes, funnel clouds, damaging winds or any other weather events if safe to do so take a picture and record the time, please report here: <a href="https://www.torro.org.uk/severe-weather-report" target="_blank">TORRO</a>. [Not Associated]</p>-->
-		<div class="met-office-warning-notif"> 
+		<!--<div class="met-office-warning-notif"> 
 		<img src="./images/icons/met-office-logo.jfif" style="margin-right: 15px; width: 3%; border-radius: 15px; float: left;"></img>
-		<a href="https://www.metoffice.gov.uk/weather/warnings-and-advice/uk-warnings" target="_blank"><h4 style="color: white; padding-top: 10px;" id="wx-warning-text"></h5></a>
-		</div>
-		<div class="weather-station-data">
-		<div class="humid-temp-area"> 
-		<img src="./images/wx-station/weather.png" style="width: 65%"></img> 
-		<h3 style="margin-top: 6px; margin-left: 14px; color: white;">00°C</h3>
-		<p style="margin-top: -9px; margin-left: 25px; color: grey;">00°F</p>
-		<p style="margin-top: -11px; margin-left: 28px; color: grey;">Still</p></div>
-		<div class="humid-temp-area"> <img src="./images/wx-station/humidity.png" style="width: 65%"> 
-		<h3 style="margin-top: 6px; margin-left: 14px; color: white;">000%</h3>
-		<p style="margin-top: -9px; margin-left: 25px; color: grey;">00°C</p></div>
-		<div class="humid-temp-area"> <img src="./images/wx-station/pressure.png" style="width: 65%"></img> 
-		<h3 style="margin-top: 6px; margin-left: -5px; color: white;">0000 hPa</h3></div>
-		<div class="humid-temp-area"> <img src="./images/wx-station/flash.png" style="width: 65%"></img> 
-		<h3 style="margin-top: 6px; margin-left: 15px; color: white;">00KM</h3>
-		<p style="margin-top: -9px; margin-left: 26px; color: grey;">00:00Z</p>
-		<p style="margin-top: -9px; margin-left: 31px; color: grey;">0000</p></div>
-		<div class="humid-temp-area"> <img src="./images/wx-station/observed/cloud.png" style="width: 65%"></img> 
-		<h3 style="margin-top: 6px; margin-left: -18px; color: white;">OBSERVED</h3>
-		<p style="margin-top: -9px; margin-left: 24px; color: grey;">CLOUD</p>
-		<p style="margin-top: -9px; margin-left: 26px; color: grey;">00:00Z</p></div>
-		<div class="weather-station-addt"> <p style="color:white;">Weather Station Offline / WIP</p> 
-		<p style="color:white; margin-top: -8px;">Status - OFFLINE</p> 
-		<p style="color:white; margin-top: -3px;">Planned Maintenance - N/A</p>
-		<p style="color:white; margin-top: -3px;">Station Date&Time - N/A</p>
-		<pre style="background-color: rgb(18, 18, 18); color: white;">N/A</pre>
-		<a href="#" target="_blank"><button class="button" style="background-color: rgb(18, 18, 18)">Request Archive Data</button></a></div>
-		</div>
+		<a href="https://www.metoffice.gov.uk/weather/warnings-and-advice/uk-warnings" target="_blank"><h4 style="color: white; padding-top: 10px;" id="wx-warning-text"></h5></a></h4></div>-->
+		<div>
         <div id="map" class="event-map"></div>
     </div>
+  </a>
+</div>
 </div>
 </body>
+
 <footer>
 <div class="footer-area">
 <div class="blinkies">

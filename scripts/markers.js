@@ -81,6 +81,12 @@ Location: Dundee, Scotland
 [56.46432221795877, -2.97124724476383] [29-05-24 N/A]
 Source: News | <a href="https://www.thecourier.co.uk/fp/news/dundee/4995639/tornado-shaped-cloud-dundee/" target="_blank">Source</a></pre>`);
 
+L.marker([52.512497834340905, -4.055234672966098], {icon: funnelCloudMarker}).addTo(funnelCloudLayer).bindPopup(`<pre>Likely Waterspout and Tornado
+Info: This event started as a waterspout before moving onto land making it a tornado.
+Location: Borth & Ynyslas Golf Club Car Park, Wales
+[52.512497834340905, -4.055234672966098] [29-05-24 6:30BST]
+Source: News | <a href="https://www.torro.org.uk/IPS/index.php?/topic/14899-20240607-waterspouttn-ynyslas-near-borth-ceredigion/" target="_blank">Source</a></pre>`);
+
 L.marker([51.49774320425926, -0.6369741664371422], {icon: damagingLightningMarker}).addTo(damagingLightningLayer).bindPopup(`<pre>Damaging Lightning
 Estimate Location: Eton Wick
 [51.49774320425926, -0.6369741664371422] [02-05-24 N/A]
@@ -149,7 +155,7 @@ const legend = L.control.Legend({
     opacity: 1, 
     column: 1,
     legends: [{
-        label: "Funnel Clouds",
+        label: "FC, WS & TN",
         type: "image",
         url: "./images/report-map-ico/funnel-cloud.webp"
     },
