@@ -85,7 +85,7 @@ L.marker([52.512497834340905, -4.055234672966098], {icon: funnelCloudMarker}).ad
 Info: This event started as a waterspout before moving onto land making it a tornado.
 Location: Borth & Ynyslas Golf Club Car Park, Wales
 [52.512497834340905, -4.055234672966098] [29-05-24 6:30BST]
-Source: News | <a href="https://www.torro.org.uk/IPS/index.php?/topic/14899-20240607-waterspouttn-ynyslas-near-borth-ceredigion/" target="_blank">Source</a></pre>`);
+Source: News | <a href="https://www.cambrian-news.co.uk/news/it-was-like-a-lions-roar-campers-woken-by-mini-tornado-695044" target="_blank">Source</a></pre>`);
 
 L.marker([51.49774320425926, -0.6369741664371422], {icon: damagingLightningMarker}).addTo(damagingLightningLayer).bindPopup(`<pre>Damaging Lightning
 Estimate Location: Eton Wick
