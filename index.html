@@ -7,296 +7,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="=D">
   <title>Home</title>
-  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-  <link rel="stylesheet" href="./scripts/leaflet.legend.css">
-  <link rel="stylesheet" href="./scripts/style.css">
+  <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./scripts/main-style.css">
 </head>
 
 <body>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="javascript:openPage('Home', this)">pølserull</a>
+	<div class="side-content">
+		<img src="./images/profile.webp" height="145" alt="Profile Picture"></img>
+    <span class="badge bg-secondary" style="margin: 10px;">Student</span>
+    <button class="button" onclick="openPage('home', this)" id="defaultOpen" style="margin-top: 12px">Home</button>
+    <button class="button" onclick="openPage('projects', this)">Projects</button>
+    <button class="button" onclick="openPage('pictures', this)">Pictures</button>
+    <button class="button" onclick="openPage('weather', this)">Weather</button>
+    <button class="button" onclick="openPage('contact', this)">Contact</button>
+	</div>
+
+  <div class="main-content">
+    <div id="home" class="tabcontent">
+      <h2>Hi...</h2>
+      <p><<< Under Construction >>></p>
+    </div>
+
+    <div id="projects" class="tabcontent">
+      <div class="project" style="margin-left: 30px;" onclick="window.open('https://github.com/polserull/Outlook-Creator')">
+        <img src="./images/projects/outlook-creator.webp" style="width: 100%; border-radius: 15px;"></img>
+        <div style="position: absolute; color: black; top: 8px; left: 18px;">UK Weather Outlook Creator</div>
       </div>
-      <ul class="nav navbar-nav">
-        <li><a href="javascript:openPage('Home', this)" id="defaultOpen">Home</a></li>
-        <li><a href="javascript:openPage('Projects', this)">Projects</a></li>
-        <li><a href="javascript:openPage('Pictures', this)">Pictures</a></li>
-        <li><a href="javascript:openPage('UK Weather', this)">UK Event Map</a></li>
-      </ul>
-    </div>
-</nav>
 
-<div class="header">
-    <h1 id="headertitle">Home</h1>
-</div>
-
-<br>
-
-<div class="main-content-area">
-    <div id="Home" class="tabcontent">
-        <image src="./images/pfp.webp" alt="PFP" style="width: 182px; height: 175px; float: left; margin-right: 35px;"></image>
-        <div class="socials-box">
-          <a href="https://x.com/_polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Twitter</button></a>
-          <a href="https://github.com/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Github</button></a>
-          <a href="https://steamcommunity.com/id/polserull/" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Steam</button></a>
-          <a href="https://modrinth.com/user/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Modrinth</button></a>
-          <a href="https://cara.app/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Cara</button></a>
-          <a href="https://ko-fi.com/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">KO-FI</button></a>
-        </div>
-        <ul class="list-box">
-            <li>My intrests are Software Development & Meteorology.</li>
-            <li>Currently a Student, working on becoming a meterology student at the university of Reading.</li>
-            <li>Future volunteer TORRO site investigator. (The Tornado And Storm Research Orginisation)</li>
-            <li>Favorite Bands: Rammstein, Rammstein and Rammstein.</li>
-            <li>My best projects are the European Railways Addon and the UK Outlook Creator.</li>
-        </ul>
-    </div>
-    
-    <div id="Projects" class="tabcontent">
-      <ul class="proj">
-        <li class="proj-li"><a href="javascript:openPage('UK Weather Outlook Creator', this)">
-            <img src="./images/projects/outlook-creator.webp" alt="Outlook Creator Icon" style="width:100%; border-radius: 25px;">
-            <div class="container">
-              <p style="font-size: 16px; padding-top: 10px;"><b>UK Weather Outlook Creator</b></p> 
-              <span class="badge bg-secondary">Software</span>
-              <span class="badge bg-secondary">Github</span>
-              <span class="badge bg-secondary">Java</span>
-              <span class="badge bg-secondary">MIT</span>
-              <span class="badge bg-secondary">1.0.0</span>
-            </div>
-        </a></li>
-        <li class="proj-li"><a href="javascript:openPage('European Railways Addon', this)">
-            <img src="./images/projects/euaddon.webp" alt="European Railways Addon Icon" style="width:100%; border-radius: 25px;">
-            <div class="container">
-              <p style="font-size: 16px; padding-top: 10px;"><b>European Railways Addon</b></p> 
-              <span class="badge bg-secondary">Minecraft Mod Addon</span>
-              <span class="badge bg-secondary">Modrinth</span>
-              <span class="badge bg-secondary">Java</span> 
-              <span class="badge bg-secondary">MIT</span>
-              <span class="badge bg-secondary">0.2.1</span>
-            </div>
-        </a></li>
-        <li class="proj-li"><a href="https://github.com/TalonFloof/EnhancedWeather" target="_blank">
-            <img src="./images/projects/enhanced-weather.webp" alt="European Railways Addon Icon" style="width:100%; border-radius: 25px;">
-            <div class="container">
-              <p style="font-size: 16px; padding-top: 10px;"><b>Enhanced Weather</b></p> 
-              <span class="badge bg-secondary">Minecraft Mod</span>
-              <span class="badge bg-secondary">Contribution</span>
-              <a href="https://github.com/TalonFloof" target="_blank"><span class="badge bg-secondary">By TalonFloof</span></a>
-              <span class="badge bg-secondary">MIT</span>
-            </div>
-        </a></li>
-        <li class="proj-li"><a href="https://x.com/_polserull/status/1787454009483186611" target="_blank">
-          <img src="./images/projects/shiva-gadget-concept.webp" alt="Shiva Operator R6 Concept Icon" style="width:100%; border-radius: 25px;">
-          <div class="container">
-            <p style="font-size: 16px; padding-top: 10px;"><b>Shiva Gadget Concept</b></p> 
-            <span class="badge bg-secondary">Unity C#</span>
-            <a href="https://x.com/Oryx_Elite" target="_blank"><span class="badge bg-secondary">Concept by: @Oryx_Elite</span></a>
-          </div>
-        </a></li>
-        <li class="proj-li"><a href="https://x.com/_polserull/status/1786587729876205704" target="_blank">
-          <img src="./images/projects/yamuy-gadget-concept.webp" alt="European Railways Addon Icon" style="width:100%; border-radius: 25px;">
-          <div class="container">
-            <p style="font-size: 16px; padding-top: 10px;"><b>Yamuy Gadget Concept</b></p> 
-            <span class="badge bg-secondary">Unity C#</span>
-            <a href="https://x.com/Kaimento" target="_blank"><span class="badge bg-secondary">Concept by: @Kaimento</span></a>
-          </div>
-        </a></li>
-        </ul>
-    </div>
-
-    <div id="UK Weather Outlook Creator" class="tabcontent">
-      <image src="./images/projects/outlook-creator.webp" alt="UK Outlook Creator Icon" style="width: 182px; height: 182px; float: left; margin-right: 35px; border-radius: 25px;"></image>
-      <div class="socials-box">
-        <a href="https://github.com/polserull/Outlook-Creator/releases" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31);">Download</button></a>
-        <a href="https://github.com/polserull/Outlook-Creator" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31);">Github</button></a>
-        <a href="https://ko-fi.com/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31);">KO-FI</button></a>
+      <div class="project" onclick="window.open('https://modrinth.com/mod/european-railways-addon')">
+        <img src="./images/projects/euaddon.webp" style="width: 100%; border-radius: 15px;"></img>
+        <div style="position: absolute; color: white; top: 8px; left: 18px;">European Railways Addon</div>
       </div>
-        <ul class="list-box">
-            <li>UK Weather Outlook Creator - 1.0.0</li>
-            <li>Made in Java and released on Github under the MIT Licence.</li>
-            <li>Used to create weather outlooks for the UK and Ireland.</li>
-            <li>Only to be used for Research or Educational purposes only.</li>
-        </ul>
-        <br>
-    </div>
 
-    <div id="European Railways Addon" class="tabcontent">
-      <a href="https://bisecthosting.com/polse" target="_blank"><image src="https://www.bisecthosting.com/partners/custom-banners/bc07a428-927e-4ff7-b41f-d3c4397fc2cd.webp" style="float: left; margin-right: 25px; border-radius: 25px;"></image></a>
-      <image src="./images/projects/euaddon.webp" alt="UK Outlook Creator Icon" style="width: 182px; height: 182px; float: left; margin-right: 35px; border-radius: 25px;"></image>
-      <div class="socials-box">
-        <a href="https://modrinth.com/mod/european-railways-addon" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Download</button></a>
-        <a href="https://github.com/polserull/European-Railways-Addon" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Github</button></a>
-        <a href="https://discord.gg/tNA4HbeHKV" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Discord</button></a>
-        <a href="https://ko-fi.com/polserull" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">KO-FI</button></a>
-        <a href="https://crowdin.com/project/european-railways-addon" target="_blank"><button class="button" style="background-color: rgb(30, 30, 31)">Crowdin</button></a>
+      <div class="project" onclick="window.open('https://x.com/_polserull/status/1787454009483186611')">
+        <img src="./images/projects/shiva-gadget-concept.webp" style="width: 100%; border-radius: 15px;"></img>
+        <div style="position: absolute; color: white; top: 8px; left: 18px;">Shiva Gadget Concept</div>
       </div>
-        <ul class="list-box">
-            <li>European Railways Addon - 0.2.1</li>
-            <li>Made in Java and released on Github under the MIT Licence.</li>
-            <li>An addon for the MTR Mod for Minecraft that adds stuff from european railways.</li>
-            <li>Made by me the idea came from szandorthe13th.</li>
-            <li>Translated into German, Spanish, Russian and Croation.</li>
-            <li>Translators: szandorthe13th, balazskis, JustNoone, Dave_2911_ and LtSerg.
-            <li>Currently at 2.2K Downloads :D</li>
-        </ul>
-        <br>
+
+      <div class="project" onclick="window.open('https://x.com/_polserull/status/1786587729876205704')">
+        <img src="./images/projects/yamuy-gadget-concept.webp" style="width: 100%; border-radius: 15px;"></img>
+        <div style="position: absolute; color: black; top: 8px; left: 18px;">Yamuy Gadget Concept</div>
+      </div>
     </div>
 
-    <div id="Pictures" class="tabcontent">
-        <button type="button" class="collapsible">Suspected Tornado Damage or SLW - West Bridgford, Nottingham</button>
-        <div class="content">
-          <ul class="img-ul">
-            <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_145937.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_145937.webp" alt="Snapped Tree Damage" style="width:100%; border-radius: 15px;">
-                <div class="container-image">
-                  <p style="font-size: 16px; padding-top: 10px;"><b>Snapped Tree</b></p> 
-                </div>
-            </a></li>
-            <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150035.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150035.webp" alt="Sheet Metal Damage" style="width:100%; border-radius: 15px;">
-                <div class="container-image">
-                  <p style="font-size: 16px; padding-top: 10px;"><b>Sheet Metal Damage</b></p> 
-                </div>
-            </a></li></ul>
-            <ul class="img-ul">
-            <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150211.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150211.webp" alt="Damaged Roof Tiles" style="width:100%; border-radius: 15px;">
-                <div class="container-image">
-                  <p style="font-size: 16px; padding-top: 10px;"><b>Damaged Roof Tiles</b></p> 
-                </div>
-            </a></li>
-            <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150215.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150215.webp" alt="Damaged Roof Tiles" style="width:100%; border-radius: 15px;">
-                <div class="container-image">
-                  <p style="font-size: 16px; padding-top: 10px;"><b>Damaged Roof Tiles</b></p> 
-                </div>
-            </a></li></ul>
-            <ul class="img-ul">
-            <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150730.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150730.webp" alt="Damaged Fence" style="width:100%; border-radius: 15px;">
-                <div class="container-image">
-                  <p style="font-size: 16px; padding-top: 10px;"><b>Damaged Fence</b></p> 
-                </div>
-            </a></li>
-            <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150739.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150739.webp" alt="Collapsed Chimney & Severe Roof Damage" style="width:100%; border-radius: 15px;">
-                <div class="container-image">
-                  <p style="font-size: 16px; padding-top: 10px;"><b>Collapsed Chimney & Severe Roof Damage</b></p> 
-                </div>
-            </a></li></ul>
-            <ul class="img-ul">
-            <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.webp" alt="Missing Roof Tiles" style="width:100%; border-radius: 15px;">
-                <div class="container-image">
-                  <p style="font-size: 16px; padding-top: 10px;"><b>Missing Roof Tiles</b></p> 
-                </div>
-            </a></li>
-            <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150938.webp" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150938.webp" alt="Missing Roof Tiles" style="width:100%; border-radius: 15px;">
-                <div class="container-image">
-                  <p style="font-size: 16px; padding-top: 10px;"><b>Missing Roof Tiles</b></p> 
-                </div>
-            </a></li></ul>
-            <ul class="img-ul">
-            <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/wx-download.zip" target="_blank">
-                <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_145937.webp" alt="ZIP DOWNLOAD" style="width:100%; border-radius: 15px;">
-                <div class="container-image">
-                  <p style="font-size: 16px; padding-top: 10px;"><b>Zip File Download</b></p> 
-                </div>
-            </a></li>
-            <li class="img-li"><a href="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.webp" target="_blank">
-              <img src="./images/wx_t_westb/Wx-20240415T155622Z-001/Wx/20240415_150917.webp" alt="" style="width:100%; border-radius: 15px;">
-              <div class="container-image">
-                <p style="font-size: 16px; padding-top: 10px;"><b></b></p> 
-              </div>
-          </a></li></ul>
-          </ul>
-        </div>
-    </div>
+    <!-- Project Pages -->
+    <!-- ------------- -->
 
-    <div id="UK Weather" class="tabcontent">
-		<!--<div class="met-office-warning-notif"> 
-		<img src="./images/icons/met-office-logo.jfif" style="margin-right: 15px; width: 3%; border-radius: 15px; float: left;"></img>
-		<a href="https://www.metoffice.gov.uk/weather/warnings-and-advice/uk-warnings" target="_blank"><h4 style="color: white; padding-top: 10px;" id="wx-warning-text"></h5></a></h4></div>-->
-		<div>
-        <div id="map" class="event-map"></div>
-    </div>
-  </a>
-</div>
-</div>
+    <div id="pictures" class="tabcontent"><p>aa</p></div>
+
+    <div id="weather" class="tabcontent"><p>aa</p></div>
+
+    <div id="contact" class="tabcontent"><p>aa</p></div>
+  </div>
 </body>
-
-<footer>
-<div class="footer-area">
-<div class="blinkies">
-<img src="https://adriansblinkiecollection.neocities.org/buttons/e5.gif"></img>
-<img src="https://adriansblinkiecollection.neocities.org/buttons/f15.gif"></img>
-<img src="https://adriansblinkiecollection.neocities.org/buttons/f16.gif" style="padding-top: 2px;"></img>
-<img src="https://adriansblinkiecollection.neocities.org/buttons/f24.jpg"></img>
-<img src="https://adriansblinkiecollection.neocities.org/buttons/c7.gif" style="padding-top: 2px;"></img>
-<img src="https://adriansblinkiecollection.neocities.org/buttons/a23.gif"></img>
-</div>
-<p style="color: white;">Created by pølserull.</p>
-<p style="color: white;">All images and content are licenced under ARR unless stated.</p>
-<p style="color: white;">Website Licenced under MIT. Not responsible for the content of external sites.</p>
-<p style="color: white;">Sources: <a href="https://www.metoffice.gov.uk/public/data/PWSCache/WarningsRSS/Region/UK" target="_blank">MET WARNINGS</a> | <a href="https://adriansblinkiecollection.neocities.org/" target="_blank">BLINKIES</a> | <a href="https://www.flaticon.com/" target="_blank">FLATICONS</a></p>
-</div>
-</footer>
 </html>
 
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<script src="./scripts/leaflet.legend.js"></script>
-<script src="./scripts/markers.js"></script>
-<script src="./scripts/warningsfeed.js"></script>
-
-<script>
-    function openPage(pageName,elmnt) {
-      var i, tabcontent, tablinks;
-      document.getElementById('headertitle').innerHTML = pageName;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-      }
-      document.getElementById(pageName).style.display = "block";
-    }
-    
-    document.getElementById("defaultOpen").click();
-
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
+<script type="text/javascript">
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
 }
 
-console.log("Hey what are you doing here!");
-console.log(`
-  --_-_-_-_---
-   -_-_-_
-    -_-_-
-     -__-
-    _-_
-   _-
-   -_
-    _-_
-`)
+document.getElementById("defaultOpen").click();
 </script>
-       
