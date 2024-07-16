@@ -5,31 +5,51 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="=D">
-  <title>Home</title>
+  <meta name="description" content="pølserull website =D">
+  <title>pølserull</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mwasil/Leaflet.Rainviewer/leaflet.rainviewer.css"/>
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="./scripts/main-style.css">
+  <link rel="stylesheet" href="./scripts/css/main-style.css">
+  <link rel="stylesheet" href="./scripts/css/leaflet-beautify-marker-icon.css">
 </head>
 
 <body>
 	<div class="side-content">
-		<img src="./images/profile.webp" height="145" alt="Profile Picture"></img>
-    <span class="badge bg-secondary" style="margin: 10px;">Student</span>
-    <button class="button" onclick="openPage('home', this)" id="defaultOpen" style="margin-top: 12px">Home</button>
-    <button class="button" onclick="openPage('projects', this)">Projects</button>
-    <button class="button" onclick="openPage('pictures', this)">Pictures</button>
-    <button class="button" onclick="openPage('weather', this)">Weather</button>
-    <button class="button" onclick="openPage('contact', this)">Contact</button>
+		<img id="profilePicture" height="145" style="border-radius: 15px;" alt="Profile Picture"></img>
+    <span class="badge bg-secondary" style="margin: 10px;">College Student</span>
+    <button class="button" onclick="openPage('Home', this); invalmap()" id="defaultOpen" style="margin-top: 12px">Home</button>
+    <button class="button" onclick="openPage('Projects', this); invalmap()">Projects</button>
+    <button class="button" onclick="openPage('Pictures', this); invalmap()">Pictures</button>
+    <button class="button" onclick="openPage('Weather', this); invalmap()">Weather</button>
+    <button class="button" onclick="openPage('Contact', this); invalmap()">Contact</button>
 	</div>
 
   <div class="main-content">
-    <div id="home" class="tabcontent">
-      <h2>Hi...</h2>
-      <p><<< Under Construction >>></p>
+    <div id="Home" class="tabcontent">
+      <div style="width: calc(100vw - 343px); height: 100%; background-color: rgb(18, 18, 18); border-radius: 15px; text-align: left; padding: 10px; padding-left: 15px; margin-bottom: 15px;">
+        <p>Hi, welcome to my website. My fixations are trains, planes, IT, and weather. I am currently a student at college, and I am working on going to university for meteorology. I am also a member of TORRO (Tornado and Storm Research Organisation), including a future site investigator role with them.</p>
+      </div>
+      <div style="width: calc(100vw - 343px); height: 100%; background-color: rgb(18, 18, 18); border-radius: 15px; text-align: left; padding: 10px; padding-left: 15px;">
+        <p>Below is a list of my socials where you can view my content, support me or contact me -></p>
+        <button class="button-socials" onclick="window.open('https://x.com/_polserull');">Twitter</button>
+        <button class="button-socials" onclick="window.open('https://github.com/polserull');">Github</button>
+        <button class="button-socials" onclick="window.open('https://steamcommunity.com/id/polserull');">Steam</button>
+        <button class="button-socials" onclick="window.open('https://modrinth.com/user/polserull');">Modrinth</button>
+        <button class="button-socials" onclick="window.open('https://cara.app/polserull');">Cara</button>
+        <button class="button-socials" onclick="window.open('https://ko-fi.com/polserull');">KO-FI</button>
+      </div>
     </div>
 
-    <div id="projects" class="tabcontent">
+    <div id="Projects" class="tabcontent">
       <div class="project" style="margin-left: 30px;" onclick="window.open('https://github.com/polserull/Outlook-Creator')">
         <img src="./images/projects/outlook-creator.webp" style="width: 100%; border-radius: 15px;"></img>
         <div style="position: absolute; color: black; top: 8px; left: 18px;">UK Weather Outlook Creator</div>
@@ -54,18 +74,57 @@
     <!-- Project Pages -->
     <!-- ------------- -->
 
-    <div id="pictures" class="tabcontent"><p>aa</p></div>
+    <div id="Pictures" class="tabcontent"><p>aa</p></div>
 
-    <div id="weather" class="tabcontent"><p>aa</p></div>
+    <div id="Weather" class="tabcontent">
+      <div id="map" style="width: calc(100vw - 808px); height: calc(100vh - 80px); float: left; border-radius: 15px;"></div>
+      <a href="https://metar-taf.com/EGLL" target="_blank" id="metartaf-n99Mtnkk" class="metar">METAR London Heathrow Airport</a>
+      <div class="rss-warnings">
+        <p id="wx-warning-text" style="color: white;"></p>
+        <div id="rssCarousel" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" id="rssItems">
+          </div>
+          <a class="left carousel-control" href="#rssCarousel" data-slide="prev" style="border-radius: 15px;">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#rssCarousel" data-slide="next" style="border-radius: 15px;">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
 
-    <div id="contact" class="tabcontent"><p>aa</p></div>
+    <div id="Contact" class="tabcontent">
+      <div style="float: left; width: calc(100vw - 740px); height: calc(100vh - 343px); background-color: rgb(18, 18, 18); border-radius: 15px; text-align: left; padding: 10px; padding-left: 15px;">
+        <p>To contact me you can visit the link below or scan the QR code on the right with your phone, Alternativy you can contact me via social media which will also be listed below.</p>
+        <p><a href="https://forms.gle/pxMK9HHjsgpsAFnT6" target="_blank">https://forms.gle/pxMK9HHjsgpsAFnT6</a></p>
+      </div>
+      <div class="qr-contact"><img src="./images/contact/qr-code.png" style="width: 350px; border-radius: 15px;" alt="QR Code to contact page"></div>
+    </div>
   </div>
 </body>
 </html>
 
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+crossorigin=""></script>
+<script src="https://cdn.jsdelivr.net/gh/mwasil/Leaflet.Rainviewer/leaflet.rainviewer.js"></script>
+<script src="./scripts/js/leaflet-beautify-marker-icon.js"></script>
+<script src="./scripts/js/eventmap.js"></script>
+<script src="./scripts/js/met-warnings.js"></script>
+
+<script async defer crossorigin="anonymous" src="https://metar-taf.com/embed-js/EGLL?bg_color=1E1E1E&layout=landscape&qnh=hPa&rh=rh&target=n99Mtnkk"></script>
+
 <script type="text/javascript">
+const imagePaths = ['./images/profile.webp', './images/profile_two.jpg', './images/profile_three.jpg'];
+const imgElement = document.getElementById('profilePicture');
+imgElement.src = imagePaths[Math.floor(Math.random() * imagePaths.length)];
+
 function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
+  document.title = pageName;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
