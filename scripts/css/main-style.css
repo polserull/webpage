@@ -38,12 +38,13 @@ div.project {
 }
 
 .project:hover {
-  cursor: pointer;
   opacity: 0.4;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .button {
-	background-color: rgb(18, 18, 18);
+  background-color: rgb(18, 18, 18);
   border-radius: 10px;
   border: none;
   color: white;
@@ -59,7 +60,7 @@ div.project {
 }
 
 .button-socials {
-	background-color: rgb(30, 30, 31);
+  background-color: rgb(30, 30, 31);
   border-radius: 10px;
   border: none;
   color: white;
@@ -75,13 +76,13 @@ div.project {
 }
 
 .button:hover {
-	background-color: #bababa;
+  background-color: #666666;
   transition: 0.7s;
 }
 
 .button-socials:hover {
-	background-color: #bababa;
-    transition: 0.7s;
+  background-color: #666666;
+  transition: 0.7s;
 }
 
 .tabcontent {
