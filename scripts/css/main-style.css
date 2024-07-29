@@ -1,6 +1,17 @@
 body {
-	font-family: "Inconsolata", monospace;
+  font-family: "Inconsolata", monospace;
   background-color: rgb(18, 18, 18);
+}
+
+hr.rounded {
+  border-top: 4px solid rgb(18, 18, 18);
+  width: calc(100vw - 350px);
+  border-radius: 14px;
+}
+
+.gPic {
+	padding-right: 10px;
+	margin-bottom: 10px;
 }
 
 div.side-content {
@@ -21,6 +32,8 @@ div.main-content {
 	height: calc(100vh - 30px);
 	border-radius: 15px;
 	text-align: center;
+	overflow: auto;
+	overflow-x: hidden;
 	margin-top: 15px;
 	padding: 24px;
 	float: left;
@@ -38,6 +51,12 @@ div.project {
 }
 
 .project:hover {
+  opacity: 0.4;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.gPic:hover {
   opacity: 0.4;
   cursor: pointer;
   transition: 0.2s;
