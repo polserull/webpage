@@ -30,7 +30,7 @@
     <button class="button" onclick="openPage('Projects', this); invalmap()">Projects</button>
     <button class="button" onclick="openPage('Pictures', this); invalmap()">Pictures</button>
     <button class="button" onclick="openPage('Weather', this); invalmap()">Weather</button>
-    <button class="button" onclick="openPage('Contact', this); invalmap()">Contact</button>
+    <button class="button" onclick="window.open('https://forms.gle/pxMK9HHjsgpsAFnT6');">Contact</button>
 	<img src="https://pixels.crd.co/assets/images/gallery70/5b09bed3.gif?v=7212058b" height="14" alt="pixels"></img>
 	<img src="https://pixels.crd.co/assets/images/gallery70/fc0464af.gif?v=7212058b" height="14" alt="pixels"></img>
 	<img src="https://pixels.crd.co/assets/images/gallery62/6f41e1f2.gif?v=7212058b" height="14" alt="pixels"></img>
@@ -110,7 +110,6 @@
 
     <div id="Weather" class="tabcontent">
       <div id="map" style="width: calc(100vw - 818px); height: calc(100vh - 80px); float: left; border-radius: 15px;"></div>
-      <a href="https://metar-taf.com/EGLL" target="_blank" id="metartaf-n99Mtnkk" class="metar">METAR London Heathrow Airport</a>
       <div class="rss-warnings">
         <p id="wx-warning-text" style="color: white;"></p>
         <div id="rssCarousel" class="carousel slide" data-ride="carousel">
@@ -126,16 +125,6 @@
           </a>
         </div>
       </div>
-    </div>
-
-    <div id="Contact" class="tabcontent">
-      <div style="float: left; width: calc(100vw - 750px); height: 100%; background-color: rgb(18, 18, 18); border-radius: 15px; text-align: left; padding: 10px; padding-left: 15px;">
-        <p>To contact me you can visit the `Contact` button below or scan the QR code on the right with your phone, Alternatively you can contact me via social media which will also be listed below.</p>
-		<button class="button-socials" onclick="window.open('https://forms.gle/pxMK9HHjsgpsAFnT6');">Contact</button>
-		<button class="button-socials" onclick="window.open('https://x.com/_polserull');">Twitter</button>
-        <button class="button-socials" onclick="window.open('https://ko-fi.com/polserull');">KO-FI</button>
-      </div>
-      <div class="qr-contact"><img src="./images/contact/qr-code.png" style="width: 350px; border-radius: 15px;" alt="QR Code to contact page"></div>
     </div>
   </div>
 </body>
