@@ -36,3 +36,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     fetchRSSFeed();
 });
+
+
+// calc(100vw - 1206px);

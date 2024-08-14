@@ -1,6 +1,6 @@
 body {
   font-family: "Inconsolata", monospace;
-  background-color: rgb(18, 18, 18);
+  background-image: url('./bg.gif');
 }
 
 hr.rounded {
@@ -29,7 +29,8 @@ div.side-content {
 div.main-content {
 	background-color: rgb(30, 30, 31);
 	width: calc(100vw - 300px);
-	height: calc(100vh - 30px);
+	height: 100%;
+	max-height: calc(100vh - 30px);
 	border-radius: 15px;
 	text-align: center;
 	overflow: auto;
@@ -84,10 +85,12 @@ div.project {
   border: none;
   color: white;
   text-align: center;
+  flex-wrap: wrap;
+  display:inline-block;
   text-decoration: none;
   font-size: 14px;
   margin: 4px 0px;
-  width: calc(100vw - 1206px);
+  width: 16%;
   height: 35px;
   line-height: 7px;
   cursor: pointer;
