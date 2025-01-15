@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'BRFont';
-    src: url('fonts/britrdn_.ttf') format('truetype');
+    src: url('./fonts/britrdn_.ttf') format('truetype');
 }
 
 body {
