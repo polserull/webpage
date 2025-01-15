@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'BRFont';
+    src: url('fonts/britrdn_.ttf') format('truetype');
+}
+
 body {
   font-family: "Inconsolata", monospace;
   background-image: url('./images/bg.gif');
@@ -125,88 +130,15 @@ div.project {
   width: 25%;
 }
 
-.metar {
-	font-size:18px; 
-	font-weight:500; 
-	color:#000;
-	margin-bottom: 15px;
-	background-color: rgb(18, 18, 18, 1.0); 
-	width:450px; 
-	height:278px; 
-	float: right; 
-	display:block; 
-	margin-left: 15px; 
-	border-radius: 15px; 
-	padding: 5px;
-}
-
-.qr-contact {
-	margin-bottom: 15px;
-	background-color: rgb(18, 18, 18); 
-	width: 140px; 
-	height:100%; 
-	float: right; 
-	display:block; 
-	padding: 15px;
-	margin-left: 15px; 
-	border-radius: 15px; 
-}
-
-.rss-warnings {
-	font-size:18px; 
-	font-weight:500; 
-	color:#000;
-	margin-bottom: 15px;
-	background-color: rgb(18, 18, 18, 1.0); 
-	width:450px; 
-	height:245px; 
-	float: right; 
-	display:block; 
-	margin-left: 15px; 
-	border-radius: 15px; 
-	padding: 5px;
-}
-
-.carousel-inner > .item {
-  height: 200px;
-  background-color: #1E1E1E;
+.euaddon-button {
+  width: 256px;
+  height: 256px;
   border-radius: 15px;
-  color: white;
 }
 
-.carousel-caption h3 {
-  color: #fff;
-  border-radius: 15px;
-  font-size: 24px;
+input[type="image"].euaddon-button:hover {
+  opacity: 0.4;
+  transition: 0.7s;
 }
 
-.carousel-caption p {
-  color: #ccc;
-  border-radius: 15px;
-  font-size: 16px;
-}
 
-::-moz-selection {
-  color: white;
-  background: #042c62;
-}
-
-::selection {
-  color: white;
-  background: #042c62;
-}
-
-.leaflet-control-layers,
-.leaflet-control-zoom-in,
-.leaflet-control-zoom-out {
-  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
-}
-
-.leaflet-control-rainviewer-opacityslider, 
-.leaflet-control-rainviewer-positionslider, 
-.leaflet-control-rainviewer-label{
-	color: black;
-  display: block;
-  clear: both;
-  margin-top: 15px;
-}
